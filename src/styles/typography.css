@@ -1,0 +1,145 @@
+/* Typography System for Aditya Hotel Website */
+
+/* Base Typography Classes */
+.typography-display {
+  @apply font-serif font-bold text-neutral-800;
+}
+
+.typography-heading {
+  @apply font-serif font-semibold text-neutral-800;
+}
+
+.typography-subheading {
+  @apply font-sans font-semibold text-neutral-700;
+}
+
+.typography-body {
+  @apply font-sans text-neutral-600;
+}
+
+.typography-caption {
+  @apply font-sans text-neutral-500;
+}
+
+.typography-button {
+  @apply font-sans font-semibold;
+}
+
+/* Display Typography (Hero Titles, Main Headlines) */
+.display-1 {
+  @apply typography-display text-4xl md:text-6xl lg:text-7xl leading-tight;
+}
+
+.display-2 {
+  @apply typography-display text-3xl md:text-5xl lg:text-6xl leading-tight;
+}
+
+.display-3 {
+  @apply typography-display text-2xl md:text-4xl lg:text-5xl leading-tight;
+}
+
+/* Heading Typography (Section Headers) */
+.heading-1 {
+  @apply typography-heading text-2xl md:text-3xl lg:text-4xl leading-snug;
+}
+
+.heading-2 {
+  @apply typography-heading text-xl md:text-2xl lg:text-3xl leading-snug;
+}
+
+.heading-3 {
+  @apply typography-subheading text-lg md:text-xl lg:text-2xl leading-snug;
+}
+
+.heading-4 {
+  @apply typography-subheading text-base md:text-lg lg:text-xl leading-snug;
+}
+
+.heading-5 {
+  @apply typography-subheading text-sm md:text-base lg:text-lg leading-snug;
+}
+
+/* Body Typography */
+.body-large {
+  @apply typography-body text-lg md:text-xl leading-relaxed;
+}
+
+.body-medium {
+  @apply typography-body text-base md:text-lg leading-relaxed;
+}
+
+.body-small {
+  @apply typography-body text-sm md:text-base leading-relaxed;
+}
+
+/* Caption Typography */
+.caption-large {
+  @apply typography-caption text-sm md:text-base leading-normal;
+}
+
+.caption-medium {
+  @apply typography-caption text-xs md:text-sm leading-normal;
+}
+
+.caption-small {
+  @apply typography-caption text-xs leading-normal;
+}
+
+/* Button Typography */
+.button-large {
+  @apply typography-button text-base md:text-lg leading-none;
+}
+
+.button-medium {
+  @apply typography-button text-sm md:text-base leading-none;
+}
+
+.button-small {
+  @apply typography-button text-xs md:text-sm leading-none;
+}
+
+/* Special Typography */
+.text-gold-gradient {
+  @apply bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 bg-clip-text text-transparent;
+}
+
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-shadow-lg {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Page-specific Typography Overrides */
+.page-title {
+  @apply display-1 mb-6;
+}
+
+.page-subtitle {
+  @apply body-large max-w-3xl mx-auto text-center;
+}
+
+.section-title {
+  @apply heading-1 mb-6 text-center;
+}
+
+.section-subtitle {
+  @apply body-medium text-center mb-8;
+}
+
+.card-title {
+  @apply heading-3 mb-3;
+}
+
+.card-subtitle {
+  @apply body-small mb-4;
+}
+
+.feature-title {
+  @apply heading-4 mb-2;
+}
+
+.feature-description {
+  @apply body-small;
+}
