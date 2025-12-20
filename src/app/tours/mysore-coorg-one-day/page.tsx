@@ -4,9 +4,11 @@ import { BUSINESS_INFO } from '@/data/constants';
 import BookingForm from '@/components/BookingForm';
 import Image from 'next/image';
 
-const tour = tourPackages.find(t => t.slug === 'mysore-coorg-one-day');
+const tourData = tourPackages.find(t => t.slug === 'mysore-coorg-one-day');
 
-if (!tour) throw new Error('Tour not found');
+if (!tourData) throw new Error('Tour not found');
+
+const tour = tourData;
 
 export const metadata: Metadata = {
   title: 'Mysore to Coorg One Day Tour | Coffee Land Package | ₹4,800',

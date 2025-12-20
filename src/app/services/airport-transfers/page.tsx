@@ -4,11 +4,13 @@ import { services } from '@/data/services';
 import { BUSINESS_INFO } from '@/data/constants';
 import BookingForm from '@/components/BookingForm';
 
-const service = services.find((s) => s.slug === 'airport-transfers');
+const serviceData = services.find((s) => s.slug === 'airport-transfers');
 
-if (!service) {
+if (!serviceData) {
   notFound();
 }
+
+const service = serviceData;
 
 export const metadata: Metadata = {
   title: 'Mysore Airport Taxi | Bangalore Airport Transfer | ₹2,499 One Way',

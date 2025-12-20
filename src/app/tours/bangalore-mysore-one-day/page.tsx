@@ -4,11 +4,13 @@ import { BUSINESS_INFO } from '@/data/constants';
 import BookingForm from '@/components/BookingForm';
 import Image from 'next/image';
 
-const tour = tourPackages.find(t => t.slug === 'bangalore-mysore-one-day');
+const tourData = tourPackages.find(t => t.slug === 'bangalore-mysore-one-day');
 
-if (!tour) {
+if (!tourData) {
   throw new Error('Tour not found');
 }
+
+const tour = tourData;
 
 export const metadata: Metadata = {
   title: 'Bangalore to Mysore One Day Trip | Palace Tour | ₹5,200 | Cab Rental Mysore',

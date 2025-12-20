@@ -4,11 +4,13 @@ import { BUSINESS_INFO } from '@/data/constants';
 import BookingForm from '@/components/BookingForm';
 import Image from 'next/image';
 
-const tour = tourPackages.find(t => t.slug === 'mysore-wayanad-one-day');
+const tourData = tourPackages.find(t => t.slug === 'mysore-wayanad-one-day');
 
-if (!tour) {
+if (!tourData) {
   throw new Error('Tour not found');
 }
+
+const tour = tourData;
 
 export const metadata: Metadata = {
   title: 'Mysore to Wayanad One Day Tour | Edakkal Caves | ₹5,700 | Cab Rental Mysore',

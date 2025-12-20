@@ -4,11 +4,13 @@ import { BUSINESS_INFO } from '@/data/constants';
 import BookingForm from '@/components/BookingForm';
 import Image from 'next/image';
 
-const tour = tourPackages.find(t => t.slug === 'chikmagalur-weekend-package');
+const tourData = tourPackages.find(t => t.slug === 'chikmagalur-weekend-package');
 
-if (!tour) {
+if (!tourData) {
   throw new Error('Tour not found');
 }
+
+const tour = tourData;
 
 export const metadata: Metadata = {
   title: 'Chikmagalur Weekend Package 2D/1N | Coffee Land Tour | ₹8,500 | Cab Rental Mysore',

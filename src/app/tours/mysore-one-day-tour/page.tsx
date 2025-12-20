@@ -5,11 +5,13 @@ import BookingForm from '@/components/BookingForm';
 import TourServiceDisclaimer from '@/components/TourServiceDisclaimer';
 import Image from 'next/image';
 
-const tour = tourPackages.find(t => t.slug === 'mysore-one-day-tour');
+const tourData = tourPackages.find(t => t.slug === 'mysore-one-day-tour');
 
-if (!tour) {
+if (!tourData) {
   throw new Error('Tour not found');
 }
+
+const tour = tourData;
 
 export const metadata: Metadata = {
   title: 'Mysore One Day Tour Package | City Sightseeing | ₹2,500 | Cab Rental Mysore',
