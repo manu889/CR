@@ -4,9 +4,13 @@ import { BUSINESS_INFO } from '@/data/constants';
 import BookingForm from '@/components/BookingForm';
 import Image from 'next/image';
 
-const tour = tourPackages.find(t => t.slug === 'mysore-ooty-one-day');
+const tourData = tourPackages.find(t => t.slug === 'mysore-ooty-one-day');
 
-if (!tour) throw new Error('Tour not found');
+if (!tourData) {
+  throw new Error('Tour not found');
+}
+
+const tour = tourData;
 
 export const metadata: Metadata = {
   title: 'Mysore to Ooty One Day Tour Package | Hill Station Trip | ₹4,500',

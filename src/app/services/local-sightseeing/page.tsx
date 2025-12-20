@@ -4,11 +4,13 @@ import { services } from '@/data/services';
 import { BUSINESS_INFO } from '@/data/constants';
 import BookingForm from '@/components/BookingForm';
 
-const service = services.find((s) => s.slug === 'local-sightseeing');
+const serviceData = services.find((s) => s.slug === 'local-sightseeing');
 
-if (!service) {
+if (!serviceData) {
   notFound();
 }
+
+const service = serviceData;
 
 export const metadata: Metadata = {
   title: 'Mysore Local Sightseeing Taxi | Full Day ₹2,500 Half Day ₹1,500 | Mysore Darshan Package',

@@ -4,11 +4,13 @@ import { BUSINESS_INFO } from '@/data/constants';
 import BookingForm from '@/components/BookingForm';
 import Image from 'next/image';
 
-const tour = tourPackages.find(t => t.slug === 'tirupati-package-from-mysore');
+const tourData = tourPackages.find(t => t.slug === 'tirupati-package-from-mysore');
 
-if (!tour) {
+if (!tourData) {
   throw new Error('Tour not found');
 }
+
+const tour = tourData;
 
 export const metadata: Metadata = {
   title: 'Tirupati Package from Mysore 2D/1N | Venkateswara Temple | ₹14,500 | Cab Rental',

@@ -4,11 +4,13 @@ import { services } from '@/data/services';
 import { BUSINESS_INFO } from '@/data/constants';
 import BookingForm from '@/components/BookingForm';
 
-const service = services.find((s) => s.slug === 'pilgrimage-tours');
+const serviceData = services.find((s) => s.slug === 'pilgrimage-tours');
 
-if (!service) {
+if (!serviceData) {
   notFound();
 }
+
+const service = serviceData;
 
 export const metadata: Metadata = {
   title: 'Pilgrimage Tours from Mysore | Temple Tour Packages | Dharmasthala',

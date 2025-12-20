@@ -4,11 +4,13 @@ import { BUSINESS_INFO } from '@/data/constants';
 import BookingForm from '@/components/BookingForm';
 import Image from 'next/image';
 
-const tour = tourPackages.find(t => t.slug === 'mysore-ooty-coorg-package');
+const tourData = tourPackages.find(t => t.slug === 'mysore-ooty-coorg-package');
 
-if (!tour) {
+if (!tourData) {
   throw new Error('Tour not found');
 }
+
+const tour = tourData;
 
 export const metadata: Metadata = {
   title: 'Mysore Ooty Coorg Package 4D/3N | Hill Station Tour | ₹17,500 | Cab Rental Mysore',

@@ -4,11 +4,13 @@ import { services } from '@/data/services';
 import { BUSINESS_INFO } from '@/data/constants';
 import BookingForm from '@/components/BookingForm';
 
-const service = services.find((s) => s.slug === 'outstation-taxi');
+const serviceData = services.find((s) => s.slug === 'outstation-taxi');
 
-if (!service) {
+if (!serviceData) {
   notFound();
 }
+
+const service = serviceData;
 
 export const metadata: Metadata = {
   title: 'Outstation Taxi Mysore | One Way Drop Taxi | Mysore to Ooty Coorg Bangalore Cab ₹11/km',

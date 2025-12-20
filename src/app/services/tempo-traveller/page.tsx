@@ -4,11 +4,13 @@ import { services } from '@/data/services';
 import { BUSINESS_INFO } from '@/data/constants';
 import BookingForm from '@/components/BookingForm';
 
-const service = services.find((s) => s.slug === 'tempo-traveller');
+const serviceData = services.find((s) => s.slug === 'tempo-traveller');
 
-if (!service) {
+if (!serviceData) {
   notFound();
 }
+
+const service = serviceData;
 
 export const metadata: Metadata = {
   title: 'Tempo Traveller on Rent in Mysore | 12-17 Seater | ₹18/km',
