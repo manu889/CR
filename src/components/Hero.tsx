@@ -3,7 +3,7 @@ import { BUSINESS_INFO } from '@/data/constants';
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 pt-24 pb-12 lg:py-20">
+    <section className="relative bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 pt-32 lg:pt-40 pb-12 lg:pb-20">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 items-start">
           {/* Left Column - Content */}
