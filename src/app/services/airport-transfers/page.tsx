@@ -20,24 +20,31 @@ export const metadata: Metadata = {
 
 export default function AirportTransfersPage() {
   return (
-    <main className="min-h-screen">
-      <section className="bg-blue-600 text-white py-16 md:py-24">
-        <div className="container-custom">
+    <main className="min-h-screen pt-20">
+      <section className="relative bg-gradient-to-br from-amber-50 via-white to-orange-50 py-12 md:py-16 overflow-hidden">
+        {/* Background Image Overlay */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-5"
+          style={{ backgroundImage: "url('/Images/img (4).jpg')" }}
+          aria-hidden="true"
+        />
+        <div className="container-custom relative z-10">
           <div className="max-w-4xl">
-            <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              {service.icon} {service.title}
+            <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              <span className="text-xl">{service.icon}</span>
+              <span>{service.title}</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
               Mysore Airport Taxi - Bangalore Airport Transfer Service
             </h1>
-            <p className="text-base md:text-lg text-blue-50 mb-8">
+            <p className="text-base md:text-lg text-gray-700 mb-6">
               {service.description}
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href={`tel:${BUSINESS_INFO.phone}`} className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all text-lg">
+              <a href={`tel:${BUSINESS_INFO.phone}`} className="btn-primary">
                 📞 Call {BUSINESS_INFO.phone}
               </a>
-              <a href={`https://wa.me/${BUSINESS_INFO.whatsapp.replace(/\D/g, '')}`} className="bg-blue-700 text-white hover:bg-blue-800 font-bold py-4 px-8 rounded-lg transition-all text-lg">
+              <a href={`https://wa.me/${BUSINESS_INFO.whatsapp.replace(/\D/g, '')}`} className="btn-secondary">
                 💬 WhatsApp
               </a>
             </div>

@@ -35,7 +35,7 @@ export const vehicles: VehicleData[] = [
     name: 'Toyota Innova',
     category: 'suv',
     seating: 7,
-    image: '/Images/Vehicles/Ertiga.png',
+    image: '/Images/Vehicles/Innova.png',
     features: ['AC', 'Spacious', '7-Seater', 'Large Boot', 'Captain Seats'],
     idealFor: 'Family trips, Group travel, Outstation tours',
     pricePerKm: '₹14 - ₹16'
@@ -55,7 +55,7 @@ export const vehicles: VehicleData[] = [
     name: 'Toyota Innova Crysta',
     category: 'luxury',
     seating: 7,
-    image: '/Images/Vehicles/Dzire.png',
+    image: '/Images/Vehicles/Crysta.webp',
     features: ['Premium AC', 'Luxury Seats', 'Advanced Safety', 'Premium Audio'],
     idealFor: 'Corporate travel, VIP guests, Luxury tours',
     pricePerKm: '₹16 - ₹18'
@@ -65,7 +65,7 @@ export const vehicles: VehicleData[] = [
     name: 'Tempo Traveller 12-Seater',
     category: 'tempo',
     seating: 12,
-    image: '/Images/Vehicles/Etios.png',
+    image: '/Images/Vehicles/Tempo-Traveller.png',
     features: ['AC', 'Push-back Seats', 'Music System', 'Large Luggage Space'],
     idealFor: 'Group tours, Pilgrimages, Corporate outings',
     pricePerKm: '₹18 - ₹20'
@@ -75,7 +75,7 @@ export const vehicles: VehicleData[] = [
     name: 'Tempo Traveller 17-Seater',
     category: 'tempo',
     seating: 17,
-    image: '/Images/Vehicles/Ertiga.png',
+    image: '/Images/Vehicles/Tempo-Traveller.png',
     features: ['AC', 'Comfortable Seating', 'Entertainment System', 'Spacious'],
     idealFor: 'Large groups, Family functions, College trips',
     pricePerKm: '₹20 - ₹22'

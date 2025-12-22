@@ -14,7 +14,7 @@ const tour = tourData;
 
 export const metadata: Metadata = {
   title: 'Tirupati Package from Mysore 2D/1N | Venkateswara Temple | ₹14,500 | Cab Rental',
-  description: 'Book Tirupati darshan package from Mysore. 2 days 1 night trip to Tirumala Venkateswara Temple with AC cab, hotel stay ₹14,500. Call +91 96327 22100',
+  description: 'Book Tirupati taxi package from Mysore. 2 days 1 night trip to Tirumala Venkateswara Temple with AC cab service ₹14,500. Call +91 96327 22100',
   keywords: ['tirupati package from mysore', 'mysore to tirupati tour', 'tirumala darshan from mysore', 'venkateswara temple mysore', 'tirupati 2 days package', 'mysore tirupati cab', 'balaji darshan mysore', 'tirupati temple tour package', 'tirumala mysore package', 'tirupati pilgrimage from mysore'],
   openGraph: {
     title: 'Tirupati Package from Mysore - 2 Days 1 Night ₹14,500',
@@ -39,7 +39,7 @@ export default function TirupatiPackageFromMysorePage() {
                 Tirupati Package from Mysore
               </h1>
               <p className="text-base md:text-lg text-orange-50 mb-6">
-                Embark on a blessed spiritual journey to Lord Venkateswara's abode at Tirumala from Mysore. Our 2 days 1 night Tirupati package includes comfortable AC transportation, hotel stay near the temple, and assistance with darshan arrangements. Experience divine blessings at one of the world's most visited pilgrimage sites.
+                Embark on a blessed spiritual journey to Lord Venkateswara's abode at Tirumala from Mysore. Our 2 days 1 night Tirupati taxi service includes comfortable AC transportation and flexible timings for your darshan. Experience divine blessings at one of the world's most visited pilgrimage sites. (Note: Hotel accommodation not included - taxi service only)
               </p>
               <div className="flex flex-wrap gap-4 items-center mb-6">
                 <div className="bg-white text-orange-600 px-6 py-3 rounded-lg">
@@ -82,7 +82,7 @@ export default function TirupatiPackageFromMysorePage() {
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Mysore to Tirupati Pilgrimage - Divine Darshan Package</h2>
               <p className="text-lg text-gray-700 mb-8">
-                Undertake a sacred pilgrimage to Tirumala, the abode of Lord Sri Venkateswara Swamy, from Mysore. This comprehensive 2 days 1 night package covers the 600 km journey in comfortable AC vehicles, includes hotel accommodation near the temple, and provides assistance for darshan arrangements. Our experienced drivers know the route well and ensure a safe, comfortable journey through Karnataka and Andhra Pradesh.
+                Undertake a sacred pilgrimage to Tirumala, the abode of Lord Sri Venkateswara Swamy, from Mysore. This taxi service package covers the 600 km journey in comfortable AC vehicles with experienced drivers who know the route well. We ensure a safe, comfortable journey through Karnataka and Andhra Pradesh. (Please note: This is a taxi-only service. Hotel accommodation and darshan tickets must be arranged separately by you.)
               </p>
 
               {/* Highlights */}
@@ -168,7 +168,7 @@ export default function TirupatiPackageFromMysorePage() {
                 <ul className="space-y-2 mb-6">
                   <li className="text-gray-700">✓ <strong>Early Morning Departure:</strong> Start at 4 AM to reach Tirupati by afternoon</li>
                   <li className="text-gray-700">✓ <strong>Interstate Travel:</strong> Seamless journey through Karnataka and Andhra Pradesh</li>
-                  <li className="text-gray-700">✓ <strong>Comfortable Accommodation:</strong> Hotels near temple for easy access</li>
+                  <li className="text-gray-700">✓ <strong>Flexible Timing:</strong> We wait for you to complete your darshan</li>
                   <li className="text-gray-700">✓ <strong>Darshan Assistance:</strong> Guidance on ticket booking and temple procedures</li>
                   <li className="text-gray-700">✓ <strong>Experienced Drivers:</strong> Well-versed with Tirupati routes and timings</li>
                   <li className="text-gray-700">✓ <strong>Flexible Return:</strong> Depart based on your darshan completion time</li>
@@ -190,8 +190,8 @@ export default function TirupatiPackageFromMysorePage() {
                     <p className="text-gray-700">Temple open daily 2:30 AM - 1:00 AM next day. Traditional dress mandatory - dhoti/kurta for men, saree/churidar for women. Avoid jeans, shorts, modern attire. Mobile phones and cameras not allowed inside sanctum.</p>
                   </div>
                   <div>
-                    <h5 className="font-bold text-gray-900">Accommodation Near Temple</h5>
-                    <p className="text-gray-700">We arrange hotels in Tirupati city (22 km from temple) or Tirumala if available. Early morning transport to temple included. Most pilgrims prefer staying in Tirupati for better hotel options.</p>
+                    <h5 className="font-bold text-gray-900">About Hotel Accommodation</h5>
+                    <p className="text-gray-700">We provide taxi service only. You must arrange your own hotel accommodation in Tirupati city (22 km from temple) or Tirumala. Our driver can recommend good hotels and will be available for temple drops/pickups during your stay.</p>
                   </div>
                   <div>
                     <h5 className="font-bold text-gray-900">Laddu Prasadam</h5>

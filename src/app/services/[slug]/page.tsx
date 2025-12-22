@@ -10,8 +10,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const service = services.find((s) => s.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const service = services.find((s) => s.slug === slug);
   
   if (!service) {
     return {
@@ -53,7 +54,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     }
   };
 
-  const config = seoConfig[params.slug] || {
+  const config = seoConfig[slug] || {
     title: `${service.title} Mysore | ${BUSINESS_INFO.name}`,
     description: `${service.description} Starting from ${service.pricing}. Book now! Call ${BUSINESS_INFO.phone}`,
     keywords: [service.title, 'mysore', 'taxi', 'cab service', service.slug]
@@ -71,8 +72,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function ServicePage({ params }: { params: { slug: string } }) {
-  const service = services.find((s) => s.slug === params.slug);
+export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const service = services.find((s) => s.slug === slug);
 
   if (!service) {
     notFound();
@@ -154,7 +156,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
     }
   };
 
-  const content = seoContent[params.slug] || {
+  const content = seoContent[slug] || {
     h1: service.title,
     subtitle: service.shortDescription,
     whyChoose: service.features
@@ -194,14 +196,14 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       
       <div className="pt-20">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-amber-50 via-white to-orange-50 py-16">
+        <section className="bg-gradient-to-br from-amber-50 via-white to-orange-50 py-12 md:py-16">
           <div className="container-custom">
             <div className="max-w-4xl">
               <div className="text-5xl mb-4">{service.icon}</div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 {content.h1}
               </h1>
-              <p className="text-xl text-gray-600 mb-6">
+              <p className="text-lg md:text-xl text-gray-700 mb-6">
                 {content.subtitle}
               </p>
               <div className="flex flex-wrap gap-4">

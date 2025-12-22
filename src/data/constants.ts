@@ -77,17 +77,6 @@ export const NAV_LINKS = [
     href: '/vehicles'
   },
   { 
-    label: 'Popular Routes', 
-    href: '/routes',
-    dropdown: [
-      { label: 'All Routes', href: '/routes' },
-      { label: 'Mysore to Ooty', href: '/routes/mysore-to-ooty' },
-      { label: 'Mysore to Coorg', href: '/routes/mysore-to-coorg' },
-      { label: 'Bangalore to Mysore', href: '/routes/bangalore-to-mysore' },
-      { label: 'Mysore to Wayanad', href: '/routes/mysore-to-wayanad' }
-    ]
-  },
-  { 
     label: 'About', 
     href: '/about'
   },

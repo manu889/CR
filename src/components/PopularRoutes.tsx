@@ -3,27 +3,30 @@ import { popularRoutes } from '@/data/routes';
 
 export default function PopularRoutes() {
   return (
-    <section className="py-16 md:py-24 bg-gray-50">
+    <section className="py-12 bg-white">
       <div className="container-custom">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Popular Routes
+        <div className="text-center mb-8">
+          <span className="inline-block px-3 py-1.5 bg-amber-100 text-amber-700 rounded-full text-xs font-semibold mb-3">
+            POPULAR ROUTES
+          </span>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+            Frequently Traveled Routes
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base text-gray-600 max-w-2xl mx-auto">
             Explore our most traveled destinations from Mysore
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {popularRoutes.slice(0, 6).map((route) => (
             <Link
               key={route.slug}
               href={`/routes/${route.slug}`}
-              className="group bg-white rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-amber-500"
+              className="group bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-5 hover:shadow-xl transition-all duration-300 border border-amber-100 hover:border-amber-300"
             >
-              <div className="flex items-start justify-between mb-4">
+              <div className="flex items-start justify-between mb-3">
                 <div className="flex-1">
-                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-amber-600 transition-colors">
+                  <h3 className="text-base font-bold text-gray-900 group-hover:text-amber-600 transition-colors">
                     {route.from} → {route.to}
                   </h3>
                 </div>
@@ -33,7 +36,7 @@ export default function PopularRoutes() {
               </div>
 
               <div className="space-y-2 text-sm">
-                <div className="flex items-center gap-2 text-gray-600">
+                <div className="flex items-center gap-2 text-gray-700">
                   <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                   </svg>
@@ -58,7 +61,7 @@ export default function PopularRoutes() {
         </div>
 
         <div className="text-center mt-12">
-          <Link href="/routes" className="btn-outline">
+          <Link href="/routes" className="bg-amber-600 hover:bg-amber-700 text-white font-semibold px-5 py-2.5 rounded-lg transition-all shadow-md hover:shadow-lg text-sm">
             Explore All Routes
           </Link>
         </div>

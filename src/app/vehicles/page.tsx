@@ -20,20 +20,60 @@ export default function VehiclesPage() {
 
   return (
     <div className="pt-20">
-      <section className="bg-gradient-to-br from-amber-50 via-white to-orange-50 py-16">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
+      <section className="relative bg-gradient-to-br from-amber-50 via-white to-orange-50 py-12 md:py-16 overflow-hidden">
+        {/* Background Image Overlay */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-5"
+          style={{ backgroundImage: "url('/Images/img (23).jpg')" }}
+          aria-hidden="true"
+        />
+        <div className="container-custom relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Fleet
+              Our Fleet of Well-Maintained Vehicles
             </h1>
-            <p className="text-base md:text-lg text-gray-600">
-              Choose from our well-maintained vehicles for a comfortable journey
+            <p className="text-lg text-gray-700 mb-6">
+              Choose from our extensive range of clean, comfortable AC vehicles. From sedans for quick city trips to tempo travellers for group tours, we have the perfect ride for every journey.
             </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <a href={`tel:${BUSINESS_INFO.phone}`} className="btn-primary">
+                📞 Call {BUSINESS_INFO.phone}
+              </a>
+              <a href={`https://wa.me/${BUSINESS_INFO.whatsapp.replace(/\D/g, '')}`} className="btn-secondary">
+                💬 Book on WhatsApp
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16">
+      {/* Why Choose Our Fleet */}
+      <section className="py-12 bg-white">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Why Choose Our Fleet?</h2>
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              <div className="text-center p-6 bg-amber-50 rounded-xl">
+                <div className="text-4xl mb-3">✅</div>
+                <h3 className="font-bold text-gray-900 mb-2">Regular Maintenance</h3>
+                <p className="text-gray-700 text-sm">All vehicles undergo regular servicing and safety inspections</p>
+              </div>
+              <div className="text-center p-6 bg-amber-50 rounded-xl">
+                <div className="text-4xl mb-3">❄️</div>
+                <h3 className="font-bold text-gray-900 mb-2">AC & Comfort</h3>
+                <p className="text-gray-700 text-sm">Clean interiors with working AC for a pleasant journey</p>
+              </div>
+              <div className="text-center p-6 bg-amber-50 rounded-xl">
+                <div className="text-4xl mb-3">🛡️</div>
+                <h3 className="font-bold text-gray-900 mb-2">Fully Insured</h3>
+                <p className="text-gray-700 text-sm">All vehicles are fully insured for your peace of mind</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gray-50">
         <div className="container-custom space-y-16">
           {/* Sedans */}
           <div>

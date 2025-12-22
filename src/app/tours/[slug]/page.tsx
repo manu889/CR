@@ -11,8 +11,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const tour = tourPackages.find((t) => t.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const tour = tourPackages.find((t) => t.slug === slug);
 
   if (!tour) {
     return {
@@ -33,8 +34,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function TourDetailPage({ params }: { params: { slug: string } }) {
-  const tour = tourPackages.find((t) => t.slug === params.slug);
+export default async function TourDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const tour = tourPackages.find((t) => t.slug === slug);
 
   if (!tour) {
     notFound();

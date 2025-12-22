@@ -1,5 +1,5 @@
 {
-  "name": "aditya-hotel-mysore",
+  "name": "cab-rental-mysore",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "autoprefixer": "^10.4.21",
     "framer-motion": "^11.11.17",
     "gsap": "^3.12.7",

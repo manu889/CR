@@ -62,9 +62,18 @@ export default function FAQ() {
     : faqs.filter(faq => faq.category === selectedCategory);
 
   return (
-    <section className="py-16 md:py-24 bg-white">
-      <div className="container-custom">
+    <section className="relative py-16 bg-gradient-to-br from-amber-50 to-orange-50 overflow-hidden">
+      {/* Background Pattern */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-5"
+        style={{ backgroundImage: "url('/Images/img (17).jpg')" }}
+        aria-hidden="true"
+      />
+      <div className="container-custom relative z-10">
         <div className="text-center mb-12">
+          <span className="inline-block px-4 py-2 bg-amber-100 text-amber-700 rounded-full text-sm font-semibold mb-4">
+            FAQs
+          </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Frequently Asked Questions
           </h2>

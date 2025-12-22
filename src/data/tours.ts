@@ -47,13 +47,13 @@ export const tourPackages: TourPackage[] = [
         title: 'Mysore City Sightseeing',
         description: 'Full day tour of Mysore\'s iconic landmarks',
         activities: [
-          '08:00 AM - Pickup from hotel/railway station',
+          '08:00 AM - Pickup from your location/railway station',
           '09:00 AM - Mysore Palace visit (2 hours)',
           '11:30 AM - Chamundi Hills & Temple',
           '01:00 PM - Lunch break',
           '02:30 PM - St. Philomena\'s Church',
           '04:00 PM - Brindavan Gardens',
-          '07:00 PM - Return to hotel'
+          '07:00 PM - Return to your location'
         ]
       }
     ],
@@ -314,8 +314,8 @@ export const tourPackages: TourPackage[] = [
       'Ooty hill station sightseeing',
       'Coonoor tea gardens',
       'Coorg coffee plantations',
-      '3-star hotel accommodation',
-      'Breakfast included'
+      'Professional experienced drivers',
+      'Well-maintained AC vehicles'
     ],
     itinerary: [
       {
@@ -327,7 +327,7 @@ export const tourPackages: TourPackage[] = [
           'Mysore Palace visit',
           'Chamundi Hills',
           'Drive to Ooty (180 km, 4 hours)',
-          'Check-in at Ooty hotel',
+          'Arrive in Ooty',
           'Overnight at Ooty'
         ]
       },
@@ -349,9 +349,9 @@ export const tourPackages: TourPackage[] = [
         title: 'Ooty to Coorg',
         description: 'Transfer to Coorg with enroute sightseeing',
         activities: [
-          'Checkout from Ooty',
+          'Depart from Ooty',
           'Drive to Coorg (170 km)',
-          'Check-in at Coorg resort',
+          'Arrive in Coorg',
           'Abbey Falls visit',
           'Raja\'s Seat sunset',
           'Overnight at Coorg'
@@ -417,7 +417,7 @@ export const tourPackages: TourPackage[] = [
           'Mysore Palace',
           'Chamundi Hills temple',
           'Brindavan Gardens',
-          'Check-in at Mysore hotel',
+          'Arrive in Mysore',
           'Overnight at Mysore'
         ]
       },
@@ -427,7 +427,7 @@ export const tourPackages: TourPackage[] = [
         description: 'Transfer to Coorg with sightseeing',
         activities: [
           'Drive to Coorg (120 km)',
-          'Check-in at Coorg resort',
+          'Arrive in Coorg',
           'Abbey Falls',
           'Raja\'s Seat',
           'Coffee plantation walk',
@@ -441,7 +441,7 @@ export const tourPackages: TourPackage[] = [
         activities: [
           'Golden Temple visit',
           'Drive to Wayanad (90 km)',
-          'Check-in at Wayanad resort',
+          'Arrive in Wayanad',
           'Pookode Lake',
           'Evening at leisure',
           'Overnight at Wayanad'
@@ -506,7 +506,7 @@ export const tourPackages: TourPackage[] = [
         activities: [
           '04:00 AM - Departure from Mysore',
           '02:00 PM - Arrival at Tirupati',
-          'Check-in at hotel',
+          'Arrive at accommodation area',
           'Rest and freshen up',
           'Visit local temples',
           'Overnight at Tirupati'
@@ -519,7 +519,7 @@ export const tourPackages: TourPackage[] = [
         activities: [
           '03:00 AM - Leave for Tirumala',
           '05:00 AM - Darshan at Venkateswara Temple',
-          '10:00 AM - Return to hotel',
+          '10:00 AM - Return to your location',
           '11:00 AM - Checkout',
           '12:00 PM - Departure to Mysore',
           '10:00 PM - Arrival at Mysore'
@@ -572,7 +572,7 @@ export const tourPackages: TourPackage[] = [
         activities: [
           '07:00 AM - Departure from Mysore',
           '11:00 AM - Arrival at Chikmagalur',
-          'Check-in at resort',
+          'Arrive at accommodation area',
           '02:00 PM - Coffee plantation tour',
           '04:00 PM - Hebbe Falls visit',
           '07:00 PM - Overnight at resort'
@@ -637,7 +637,7 @@ export const tourPackages: TourPackage[] = [
         activities: [
           '08:00 AM - Pickup from Mysore',
           '10:00 AM - Arrival at Kabini',
-          'Check-in at resort',
+          'Arrive at accommodation area',
           '12:00 PM - Lunch',
           '03:30 PM - Jeep safari in Nagarhole',
           '06:30 PM - Return to resort',

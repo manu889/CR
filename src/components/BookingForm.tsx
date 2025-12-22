@@ -34,7 +34,7 @@ export default function BookingForm() {
       <h3 className="text-xl font-bold text-gray-900 mb-4">Book Your Cab</h3>
       
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+        <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5">
           Your Name *
         </label>
         <input
@@ -44,13 +44,13 @@ export default function BookingForm() {
           required
           value={formData.name}
           onChange={handleChange}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all"
+          className="w-full px-4 py-3.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all text-base min-h-[44px]"
           placeholder="Enter your name"
         />
       </div>
 
       <div>
-        <label htmlFor="pickup" className="block text-sm font-medium text-gray-700 mb-1">
+        <label htmlFor="pickup" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5">
           Pickup Location *
         </label>
         <input
@@ -60,13 +60,13 @@ export default function BookingForm() {
           required
           value={formData.pickup}
           onChange={handleChange}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all"
+          className="w-full px-4 py-3.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all text-base min-h-[44px]"
           placeholder="e.g., Mysore"
         />
       </div>
 
       <div>
-        <label htmlFor="drop" className="block text-sm font-medium text-gray-700 mb-1">
+        <label htmlFor="drop" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5">
           Drop Location *
         </label>
         <input
@@ -76,13 +76,13 @@ export default function BookingForm() {
           required
           value={formData.drop}
           onChange={handleChange}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all"
+          className="w-full px-4 py-3.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all text-base min-h-[44px]"
           placeholder="e.g., Ooty"
         />
       </div>
 
       <div>
-        <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-1">
+        <label htmlFor="date" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5">
           Journey Date *
         </label>
         <input
@@ -93,12 +93,12 @@ export default function BookingForm() {
           value={formData.date}
           onChange={handleChange}
           min={new Date().toISOString().split('T')[0]}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all"
+          className="w-full px-4 py-3.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all text-base min-h-[44px]"
         />
       </div>
 
       <div>
-        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+        <label htmlFor="phone" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5">
           Phone Number *
         </label>
         <input
@@ -109,7 +109,7 @@ export default function BookingForm() {
           value={formData.phone}
           onChange={handleChange}
           pattern="[0-9]{10}"
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all"
+          className="w-full px-4 py-3.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all text-base min-h-[44px]"
           placeholder="10-digit mobile number"
         />
       </div>
@@ -118,10 +118,10 @@ export default function BookingForm() {
         type="submit"
         className="w-full btn-primary py-4 text-lg font-bold"
       >
-        Get Instant Quote
+        Get Instant Callback / Book via WhatsApp
       </button>
 
-      <p className="text-xs text-gray-500 text-center">
+      <p className="text-sm text-gray-500 text-center">
         By submitting, you agree to our terms and privacy policy
       </p>
     </form>

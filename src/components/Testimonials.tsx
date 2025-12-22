@@ -35,9 +35,12 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-br from-amber-50 via-white to-orange-50">
+    <section className="py-16 bg-white">
       <div className="container-custom">
         <div className="text-center mb-12">
+          <span className="inline-block px-4 py-2 bg-amber-100 text-amber-700 rounded-full text-sm font-semibold mb-4">
+            TESTIMONIALS
+          </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             What Our Customers Say
           </h2>

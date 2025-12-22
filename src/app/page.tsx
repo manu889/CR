@@ -1,108 +1,360 @@
-'use client'
+import Hero from '@/components/Hero';
+import ServiceCards from '@/components/ServiceCards';
+import VehicleCards from '@/components/VehicleCards';
+import PopularRoutes from '@/components/PopularRoutes';
+import PopularTours from '@/components/PopularTours';
+import Testimonials from '@/components/Testimonials';
+import FAQ from '@/components/FAQ';
+import { BUSINESS_INFO } from '@/data/constants';
+import type { Metadata } from 'next';
 
-import { useEffect, useState } from 'react'
-import dynamic from 'next/dynamic'
-import Navbar from '@/components/Navbar'
-import Hero from '@/components/Hero'
-import Footer from '@/components/Footer'
-
-// Load components without SSR to prevent hydration issues
-const About = dynamic(() => import('@/components/About'), { 
-  ssr: false,
-  loading: () => (
-    <div className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 text-center">
-        <div className="animate-pulse">
-          <div className="h-8 bg-neutral-200 rounded w-1/3 mx-auto mb-4"></div>
-          <div className="h-4 bg-neutral-200 rounded w-2/3 mx-auto"></div>
-        </div>
-      </div>
-    </div>
-  )
-})
-
-const Rooms = dynamic(() => import('@/components/Rooms'), { 
-  ssr: false,
-  loading: () => (
-    <div className="py-20 bg-neutral-50">
-      <div className="max-w-7xl mx-auto px-4 text-center">
-        <div className="animate-pulse">
-          <div className="h-8 bg-neutral-200 rounded w-1/3 mx-auto mb-4"></div>
-          <div className="grid md:grid-cols-3 gap-6 mt-8">
-            {[...Array(3)].map((_, i) => (
-              <div key={i} className="bg-neutral-100 rounded-xl h-80"></div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-})
-
-const Gallery = dynamic(() => import('@/components/Gallery'), { 
-  ssr: false,
-  loading: () => (
-    <div className="py-20 bg-neutral-50">
-      <div className="max-w-7xl mx-auto px-4 text-center">
-        <div className="animate-pulse">
-          <div className="h-8 bg-neutral-200 rounded w-1/3 mx-auto mb-4"></div>
-          <div className="grid md:grid-cols-4 gap-4 mt-8">
-            {[...Array(8)].map((_, i) => (
-              <div key={i} className="bg-neutral-200 rounded-lg aspect-square"></div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-})
-
-const Contact = dynamic(() => import('@/components/Contact'), { 
-  ssr: false,
-  loading: () => (
-    <div className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 text-center">
-        <div className="animate-pulse">
-          <div className="h-8 bg-neutral-200 rounded w-1/3 mx-auto mb-4"></div>
-          <div className="h-4 bg-neutral-200 rounded w-2/3 mx-auto"></div>
-        </div>
-      </div>
-    </div>
-  )
-})
+export const metadata: Metadata = {
+  title: 'Cab Rental Mysore - Professional Taxi Services | 24/7 Cabs Available',
+  description: 'Book best taxi services in Mysore. Cabs in Mysore for outstation trips (Ooty, Coorg, Bangalore), airport transfers, local sightseeing, tempo traveller. Professional drivers, 24/7 service. Starting ₹11/km. Call +91 96327 22100',
+  keywords: [
+    'taxi services in mysore',
+    'cabs in mysore',
+    'cab rental mysore',
+    'taxi service mysore',
+    'best taxi in mysore',
+    'mysore taxi',
+    'outstation cab mysore',
+    'mysore to ooty cab',
+    'mysore to bangalore taxi',
+    'airport taxi mysore',
+    'tempo traveller mysore',
+    'mysore local sightseeing',
+    'car rental mysore',
+    'mysore cab booking',
+    'swift dzire mysore',
+    'innova hire mysore',
+    'mysore tour packages',
+    'ooty tour from mysore',
+    'coorg package mysore',
+    'cab service reviews mysore',
+    'best taxi service mysore',
+    'mysore travels',
+    'car hire mysore',
+    'cab booking mysore',
+    'mysore taxi booking',
+    'call taxi mysore'
+  ],
+  openGraph: {
+    title: 'Cab Rental Mysore - Book Taxi for Outstation, Local & Airport Transfers',
+    description: 'Reliable taxi services in Mysore. Outstation cabs, local sightseeing, airport transfers. Professional drivers, 24/7 service. Call +91 96327 22100',
+    type: 'website',
+  }
+};
 
 export default function Home() {
-  const [isClient, setIsClient] = useState(false)
-
-  useEffect(() => {
-    setIsClient(true)
-    
-    // Initialize animations only after hydration
-    const initAnimations = async () => {
-      try {
-        const { initializeAnimations } = await import('@/lib/animations')
-        initializeAnimations()
-      } catch (error) {
-        console.log('Animations skipped')
-      }
-    }
-    
-    initAnimations()
-  }, [])
-
   return (
-    <main className="min-h-screen">
-      <Navbar />
+    <>
       <Hero />
-      {isClient && (
-        <>
-          <About />
-          <Rooms />
-          <Gallery />
-          <Contact />
-        </>
-      )}
-      <Footer />
-    </main>
-  )
+      
+      {/* Services Section */}
+      <ServiceCards />
+      
+      {/* Your Trusted Travel Partner Section */}
+      <section className="relative py-12 bg-gradient-to-br from-amber-50 to-orange-50 overflow-hidden">
+        {/* Background Pattern */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-5"
+          style={{ backgroundImage: "url('/Images/img (10).jpg')" }}
+          aria-hidden="true"
+        />
+        <div className="container-custom relative z-10">
+          <div className="text-center mb-8">
+            <span className="inline-block px-3 py-1.5 bg-amber-600 text-white rounded-full text-xs font-semibold mb-3">
+              WHY CHOOSE US
+            </span>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+              Your Trusted Travel Partner in Mysore
+            </h2>
+            <p className="text-base text-gray-600 max-w-3xl mx-auto">
+              With <strong>15+ years of experience</strong>, we are committed to delivering safe and memorable rides. Whether it's daily commuting, weekend trips, or outstation travel, we're with you every mile of the journey.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-5 mb-8">
+            <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow">
+              <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center mb-3">
+                <svg className="w-5 h-5 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-1.5">Licensed & Insured</h3>
+              <p className="text-gray-600 text-sm">All our vehicles are fully licensed and insured for your safety and peace of mind</p>
+            </div>
+            
+            <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow">
+              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-3">
+                <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-1.5">Experienced Drivers</h3>
+              <p className="text-gray-600 text-sm">Professional, courteous drivers with excellent knowledge of local and outstation routes</p>
+            </div>
+            
+            <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow">
+              <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mb-3">
+                <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-1.5">Transparent Pricing</h3>
+              <p className="text-gray-600 text-sm">No hidden charges - what you see is what you pay. Clear, upfront pricing for all services</p>
+            </div>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-5 text-center">
+            <div className="bg-white rounded-xl p-4 shadow-md">
+              <div className="text-3xl mb-1.5">🏆</div>
+              <div className="text-2xl font-bold text-amber-600 mb-0.5">15+</div>
+              <div className="text-gray-600 font-medium text-sm">Years in Service</div>
+            </div>
+            <div className="bg-white rounded-xl p-4 shadow-md">
+              <div className="text-3xl mb-1.5">👥</div>
+              <div className="text-2xl font-bold text-amber-600 mb-0.5">50+</div>
+              <div className="text-gray-600 font-medium text-sm">Professional Drivers</div>
+            </div>
+            <div className="bg-white rounded-xl p-4 shadow-md">
+              <div className="text-3xl mb-1.5">😊</div>
+              <div className="text-2xl font-bold text-amber-600 mb-0.5">10,000+</div>
+              <div className="text-gray-600 font-medium text-sm">Happy Customers</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Vehicles */}
+      <VehicleCards />
+      
+      {/* Popular Routes */}
+      <PopularRoutes />
+      
+      {/* Experience Gallery Section */}
+      <section className="py-12 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div className="container-custom">
+          <div className="text-center mb-8">
+            <span className="inline-block px-3 py-1.5 bg-amber-600 text-white rounded-full text-xs font-semibold mb-3">
+              OUR EXPERIENCE
+            </span>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+              Explore Karnataka with Comfort
+            </h2>
+            <p className="text-base text-gray-600 max-w-2xl mx-auto">
+              From heritage sites to hill stations, we've made countless journeys memorable for our customers
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+            <div className="relative h-48 md:h-56 rounded-xl overflow-hidden group">
+              <img 
+                src="/Images/img (9).jpg" 
+                alt="Mysore Palace tour - Professional guided sightseeing with our comfortable taxi service"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end p-4">
+                <div className="text-white">
+                  <p className="font-bold text-sm md:text-base">Mysore Tours</p>
+                  <p className="text-xs opacity-90">Heritage & Culture</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative h-48 md:h-56 rounded-xl overflow-hidden group">
+              <img 
+                src="/Images/img (11).jpg" 
+                alt="Ooty hill station cab service - Scenic drives with professional drivers from Mysore"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end p-4">
+                <div className="text-white">
+                  <p className="font-bold text-sm md:text-base">Hill Stations</p>
+                  <p className="text-xs opacity-90">Ooty & Coonoor</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative h-48 md:h-56 rounded-xl overflow-hidden group">
+              <img 
+                src="/Images/img (13).jpg" 
+                alt="Coorg coffee plantation tours - Weekend packages with comfortable SUV cabs"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end p-4">
+                <div className="text-white">
+                  <p className="font-bold text-sm md:text-base">Coffee Land</p>
+                  <p className="text-xs opacity-90">Coorg & Chikmagalur</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative h-48 md:h-56 rounded-xl overflow-hidden group">
+              <img 
+                src="/Images/img (16).jpg" 
+                alt="Beach tours from Mysore - Coastal Karnataka trips with reliable cab service"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end p-4">
+                <div className="text-white">
+                  <p className="font-bold text-sm md:text-base">Beaches</p>
+                  <p className="text-xs opacity-90">Coastal Karnataka</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Tour Packages */}
+      <PopularTours />
+      
+      {/* Testimonials */}
+      <Testimonials />
+      
+      {/* Ratings Section */}
+      <section className="relative py-12 bg-gradient-to-br from-amber-50 to-orange-50 overflow-hidden">
+        {/* Background Pattern */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-5"
+          style={{ backgroundImage: "url('/Images/img (15).jpg')" }}
+          aria-hidden="true"
+        />
+        <div className="container-custom relative z-10">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+              Our Customer Ratings
+            </h2>
+            <p className="text-base text-gray-600 max-w-2xl mx-auto">
+              Trusted by thousands of customers across Karnataka
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-5">
+            <div className="bg-white rounded-xl p-5 text-center shadow-md">
+              <div className="text-3xl font-bold text-amber-600 mb-1.5">4.8</div>
+              <div className="flex justify-center gap-1 mb-1.5">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <div className="text-xs text-gray-600">Overall Rating</div>
+            </div>
+            
+            <div className="bg-white rounded-xl p-5 text-center shadow-md">
+              <div className="text-3xl font-bold text-blue-600 mb-1.5">98%</div>
+              <div className="text-xs text-gray-600 font-medium mb-1">Customer Satisfaction</div>
+              <div className="text-[10px] text-gray-500">Based on 500+ reviews</div>
+            </div>
+            
+            <div className="bg-white rounded-xl p-5 text-center shadow-md">
+              <div className="text-3xl font-bold text-green-600 mb-1.5">100%</div>
+              <div className="text-xs text-gray-600 font-medium mb-1">On-Time Service</div>
+              <div className="text-[10px] text-gray-500">Always punctual</div>
+            </div>
+            
+            <div className="bg-white rounded-xl p-5 text-center shadow-md">
+              <div className="text-3xl font-bold text-purple-600 mb-1.5">24/7</div>
+              <div className="text-xs text-gray-600 font-medium mb-1">Available Service</div>
+              <div className="text-[10px] text-gray-500">Round the clock</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* FAQ */}
+      <FAQ />
+      
+      {/* Compact CTA Section */}
+      <section className="relative py-16 bg-gradient-to-br from-orange-500 via-orange-600 to-orange-700 text-white overflow-hidden">
+        {/* Background Image Overlay */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-10"
+          style={{ backgroundImage: "url('/Images/img (7).jpg')" }}
+          aria-hidden="true"
+        />
+        <div className="container-custom relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Book Best Taxi Service in Mysore <br /> Today
+            </h2>
+            <p className="text-md md:text-xl font-semibold mb-3 text-white">
+              Reliable Cab Rental for Outstation, Local & Airport Transfers
+            </p>
+            <p className="text-base md:text-lg mb-8 text-white/95">
+              Professional drivers • Clean AC vehicles • Transparent pricing • 24/7 availability<br />
+              Serving Mysore to Ooty, Coorg, Bangalore, Wayanad & all major destinations
+            </p>
+            
+            {/* Keyword Badges */}
+            <div className="flex flex-wrap justify-center gap-2 mb-6">
+              <span className="bg-white/20 text-white px-2.5 py-1 rounded-full text-xs font-medium">Mysore Taxi</span>
+              <span className="bg-white/20 text-white px-2.5 py-1 rounded-full text-xs font-medium">Cab Booking Mysore</span>
+              <span className="bg-white/20 text-white px-2.5 py-1 rounded-full text-xs font-medium">Outstation Cabs</span>
+              <span className="bg-white/20 text-white px-2.5 py-1 rounded-full text-xs font-medium">Airport Taxi</span>
+              <span className="bg-white/20 text-white px-2.5 py-1 rounded-full text-xs font-medium">Tempo Traveller</span>
+              <span className="bg-white/20 text-white px-2.5 py-1 rounded-full text-xs font-medium">Tour Packages</span>
+            </div>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
+              <a
+                href={`tel:${BUSINESS_INFO.phone}`}
+                className="inline-flex items-center justify-center gap-2 bg-white text-orange-600 hover:bg-gray-50 font-bold px-6 py-2.5 rounded-lg transition-all shadow-lg text-base"
+              >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+                Call Now: {BUSINESS_INFO.phone}
+              </a>
+              
+              <a
+                href={`https://wa.me/${BUSINESS_INFO.whatsapp.replace(/\D/g, '')}?text=Hi, I want to book a taxi in Mysore`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-2.5 rounded-lg transition-all shadow-lg text-base"
+              >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                WhatsApp: Book Cab Now
+              </a>
+            </div>
+            
+            {/* Why Choose Section */}
+            <div className="text-center">
+              <h3 className="text-lg font-bold mb-4">Why Choose Cab Rental Mysore?</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div>
+                  <div className="text-2xl font-bold">15+</div>
+                  <div className="text-xs">Years Experience</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold">10,000+</div>
+                  <div className="text-xs">Happy Customers</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold">4.8★</div>
+                  <div className="text-xs">Google Rating</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold">24/7</div>
+                  <div className="text-xs">Available</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }

@@ -1,6 +1,65 @@
-# Aditya Hotel Mysore - Official Website
+# Cab Rental Mysore - Official Website
 
-A modern, responsive website for Aditya Hotel Mysore built with Next.js 15, TypeScript, and Tailwind CSS.
+A modern, responsive website for Cab Rental Mysore built with Next.js 15, TypeScript, and Tailwind CSS.
+
+## Features
+
+- 🚗 Comprehensive taxi service showcase
+- 📱 Fully responsive design
+- ⚡ Optimized performance
+- 🎨 Modern UI with Tailwind CSS
+- 📊 SEO optimized
+- 🔒 Type-safe with TypeScript
+
+## Tech Stack
+
+- **Framework**: Next.js 15.1.4
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: Lucide React Icons
+- **Image Optimization**: Next/Image
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser.
+
+## Project Structure
+
+```
+src/
+├── app/              # Next.js pages
+├── components/       # Reusable components
+├── data/            # Data files
+└── styles/          # Global styles
+```
+
+## Key Pages
+
+- `/` - Home page with services
+- `/about` - About the business
+- `/services/` - Service pages
+- `/tours/` - Tour packages
+- `/vehicles` - Vehicle fleet
+- `/routes/` - Popular routes
+- `/contact` - Contact page
+
+---
+
+**Built for Cab Rental Mysore**
 
 ## 🏨 Features
 
@@ -24,7 +83,7 @@ A modern, responsive website for Aditya Hotel Mysore built with Next.js 15, Type
 
 ### 📄 **Complete Policy Pages**
 - **Privacy Policy**: Comprehensive data protection and privacy information
-- **Terms & Conditions**: Detailed booking terms, cancellation policies, and hotel rules
+- **Terms & Conditions**: Detailed booking terms, cancellation policies, and taxi service policies
 - **Cancellation Policy**: Clear, flexible cancellation terms with visual timeline
 - **House Rules**: Complete guidelines for guest conduct and safety
 - **Accessibility**: Detailed accessibility features and accommodations
@@ -65,7 +124,7 @@ A modern, responsive website for Aditya Hotel Mysore built with Next.js 15, Type
 - ✅ Added comprehensive content to all policy pages
 - ✅ Created Accessibility and Sustainability pages
 - ✅ Updated footer with HFFglobal credits
-- ✅ Removed outdated certifications (ISO, Green Hotel)
+- ✅ Removed hotel-specific content and components
 
 ### **Technical Fixes**
 - ✅ Fixed hydration issues and performance optimized
@@ -84,8 +143,8 @@ A modern, responsive website for Aditya Hotel Mysore built with Next.js 15, Type
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/HFFGLOBAL/Hotel-Aditya.git
-   cd Hotel-Aditya
+   git clone https://github.com/HFFGLOBAL/Cab-Rental-Mysore.git
+   cd Cab-Rental-Mysore
    ```
 
 2. **Install dependencies**:
@@ -118,7 +177,7 @@ src/
 │   ├── cancellation-policy/ # Cancellation terms
 │   ├── contact/          # Contact page
 │   ├── gallery/          # Photo gallery
-│   ├── house-rules/      # Hotel rules and guidelines
+│   ├── (removed)         # Hotel-specific pages deleted
 │   ├── privacy-policy/   # Privacy policy
 │   ├── rooms/            # Room listings and individual pages
 │   ├── sustainability/   # Environmental initiatives
@@ -136,17 +195,17 @@ src/
 
 ## 📞 **Contact Information**
 
-**Aditya Hotel Mysore**
-- **Address**: 1458, Sapna Book House, 1, NS Road, Devaraja Mohalla, Mysuru, Karnataka 570004
-- **Phone**: +91 82177 71771
-- **Email**: hoteladityamysore@gmail.com
-- **Website**: [Hotel Aditya Mysore](https://hotel-aditya.vercel.app)
+**Cab Rental Mysore**
+- **Address**: Nazarbad, Mysore, Karnataka 570001, India
+- **Phone**: +91 96327 22100
+- **Email**: info@cabrentalmysore.in
+- **Website**: [Cab Rental Mysore](https://cabrentalmysore.in)
 
 ## 👨‍💻 **Development Credits**
 
 **Developed by**: [HFFglobal](https://hffglobal.com)
 - Modern web development solutions
-- Hospitality industry expertise
+- Transportation industry expertise
 - Performance optimization specialists
 
 ## 📈 **Performance Features**
@@ -177,4 +236,4 @@ The website is optimized for deployment on **Vercel** with:
 
 ---
 
-**Built with ❤️ for Aditya Hotel Mysore by HFFglobal**
+**Built with ❤️ for Cab Rental Mysore by HFFglobal**

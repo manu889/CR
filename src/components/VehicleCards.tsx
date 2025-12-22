@@ -6,23 +6,23 @@ export default function VehicleCards() {
   const featuredVehicles = vehicles.slice(0, 6); // Show first 6 vehicles
 
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
+    <section className="py-12 bg-white">
       <div className="container-custom relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 bg-amber-100 text-amber-800 rounded-full text-sm font-semibold mb-4">
-            🚗 Our Fleet
+        <div className="text-center mb-8">
+          <span className="inline-block px-3 py-1.5 bg-amber-100 text-amber-700 rounded-full text-xs font-semibold mb-3">
+            OUR FLEET
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Choose Your Perfect Ride
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+            Premium Vehicles
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base text-gray-600 max-w-2xl mx-auto">
             Well-maintained, clean vehicles with professional drivers for your comfortable journey
           </p>
         </div>
 
         {/* Vehicle Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {featuredVehicles.map((vehicle, index) => (
             <div 
               key={vehicle.id}
@@ -33,11 +33,12 @@ export default function VehicleCards() {
                 {vehicle.image ? (
                   <Image
                     src={vehicle.image}
-                    alt={vehicle.name}
+                    alt={`${vehicle.name} - ${vehicle.seating} seater ${vehicle.category} car for rent in Mysore | Starting from ${vehicle.pricePerKm}/km | AC cab rental for ${vehicle.idealFor}`}
                     width={400}
                     height={280}
                     className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
                     priority={index < 3}
+                    loading={index < 3 ? 'eager' : 'lazy'}
                   />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -55,7 +56,7 @@ export default function VehicleCards() {
 
               {/* Vehicle Details */}
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-amber-600 transition-colors">
+                <h3 className="text-lg sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-amber-600 transition-colors">
                   {vehicle.name}
                 </h3>
                 

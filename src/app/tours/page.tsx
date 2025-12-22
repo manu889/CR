@@ -142,7 +142,7 @@ export default function ToursPage() {
               🏔️ Multi-Day Tour Packages
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Extended tours covering multiple hill stations with comfortable accommodation and comprehensive sightseeing.
+              Extended taxi tours covering multiple destinations. Comfortable transportation for comprehensive sightseeing.
             </p>
           </div>
           
@@ -311,7 +311,7 @@ export default function ToursPage() {
               🙏 Pilgrimage Tour Packages
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Spiritual journeys to famous temples and holy destinations with comfortable arrangements.
+              Spiritual journeys to famous temples with comfortable taxi service and flexible timings.
             </p>
           </div>
           
@@ -420,9 +420,9 @@ export default function ToursPage() {
             </div>
             
             <div className="bg-white rounded-xl p-6 shadow-md text-center">
-              <div className="text-4xl mb-3">🏨</div>
-              <h3 className="font-bold text-gray-900 mb-2">Quality Accommodation</h3>
-              <p className="text-sm text-gray-600">Comfortable stays at verified hotels and resorts included in packages.</p>
+              <div className="text-4xl mb-3">👨‍✈️</div>
+              <h3 className="font-bold text-gray-900 mb-2">Professional Drivers</h3>
+              <p className="text-sm text-gray-600">Experienced drivers with excellent route knowledge and customer service.</p>
             </div>
           </div>
         </div>

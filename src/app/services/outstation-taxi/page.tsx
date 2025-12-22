@@ -25,25 +25,32 @@ export const metadata: Metadata = {
 
 export default function OutstationTaxiPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="bg-amber-600 text-white py-16 md:py-24">
-        <div className="container-custom">
+      <section className="relative bg-gradient-to-br from-amber-50 via-white to-orange-50 py-12 md:py-16 overflow-hidden">
+        {/* Background Image Overlay */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-5"
+          style={{ backgroundImage: "url('/Images/img (2).jpg')" }}
+          aria-hidden="true"
+        />
+        <div className="container-custom relative z-10">
           <div className="max-w-4xl">
-            <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              {service.icon} {service.title}
+            <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              <span className="text-xl">{service.icon}</span>
+              <span>{service.title}</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Outstation Taxi Service in Mysore - One Way & Round Trip Cabs
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
+              Outstation Taxi Service in Mysore
             </h1>
-            <p className="text-base md:text-lg text-amber-50 leading-relaxed mb-8">
-              Book reliable outstation cabs from Mysore to Ooty, Coorg, Bangalore, Wayanad & more destinations. Professional drivers, clean AC vehicles, transparent pricing.
+            <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6 max-w-3xl">
+              Book reliable outstation cabs from Mysore to Ooty, Coorg, Bangalore, Wayanad & more destinations. Professional drivers, clean AC vehicles, transparent pricing starting at ₹11/km.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href={`tel:${BUSINESS_INFO.phone}`} className="btn-secondary text-lg px-8 py-4">
+              <a href={`tel:${BUSINESS_INFO.phone}`} className="btn-primary">
                 📞 Call {BUSINESS_INFO.phone}
               </a>
-              <a href={`https://wa.me/${BUSINESS_INFO.whatsapp.replace(/\D/g, '')}`} className="bg-white text-amber-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all text-lg">
+              <a href={`https://wa.me/${BUSINESS_INFO.whatsapp.replace(/\D/g, '')}`} className="btn-secondary">
                 💬 WhatsApp Us
               </a>
             </div>

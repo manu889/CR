@@ -3,13 +3,16 @@ import { services } from '@/data/services';
 
 export default function ServiceCards() {
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-12 bg-white">
       <div className="container-custom">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Services
+        <div className="text-center mb-8">
+          <span className="inline-block px-3 py-1.5 bg-amber-100 text-amber-700 rounded-full text-xs font-semibold mb-3">
+            OUR SERVICES
+          </span>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+            Tailored Taxi Services
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base text-gray-600 max-w-2xl mx-auto">
             Comprehensive taxi solutions for all your travel needs in and around Mysore
           </p>
         </div>
@@ -26,10 +29,10 @@ export default function ServiceCards() {
                   {service.icon}
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-amber-600 transition-colors">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 group-hover:text-amber-600 transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4">
+                  <p className="text-gray-600 text-xs sm:text-sm mb-3">
                     {service.shortDescription}
                   </p>
                   <div className="flex items-center justify-between">
@@ -46,8 +49,8 @@ export default function ServiceCards() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Link href="/services" className="btn-outline">
+        <div className="text-center mt-8">
+          <Link href="/services" className="bg-amber-600 hover:bg-amber-700 text-white font-semibold px-5 py-2 rounded-lg transition-all shadow-md hover:shadow-lg text-sm">
             View All Services
           </Link>
         </div>

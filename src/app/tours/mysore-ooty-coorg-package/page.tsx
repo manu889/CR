@@ -14,7 +14,7 @@ const tour = tourData;
 
 export const metadata: Metadata = {
   title: 'Mysore Ooty Coorg Package 4D/3N | Hill Station Tour | ₹17,500 | Cab Rental Mysore',
-  description: 'Book Mysore Ooty Coorg 4 days 3 nights package covering palace, hill stations, tea gardens, coffee plantations. 3-star hotels + AC cab ₹17,500. Call +91 96327 22100',
+  description: 'Book Mysore Ooty Coorg 4 days 3 nights taxi package covering palace, hill stations, tea gardens, coffee plantations. AC cab service ₹17,500. Call +91 96327 22100',
   keywords: ['mysore ooty coorg package', '4 days 3 nights tour', 'mysore ooty coorg tour', 'hill station package karnataka', 'ooty coorg tour from mysore', 'south india hill station tour', 'mysore palace ooty coorg', 'tea garden tour package', 'coffee plantation tour', 'western ghats tour package'],
   openGraph: {
     title: 'Mysore Ooty Coorg Package - 4 Days 3 Nights ₹17,500',
@@ -39,7 +39,7 @@ export default function MysoreOotyCoorgPackagePage() {
                 Mysore Ooty Coorg Package
               </h1>
               <p className="text-base md:text-lg text-purple-50 mb-6">
-                Comprehensive 4 days 3 nights tour covering the best of South India's hill stations - Mysore's royal heritage, Ooty's Nilgiri beauty, Coonoor's tea gardens, and Coorg's coffee plantations. Complete package with comfortable 3-star accommodation and all transfers.
+                Comprehensive 4 days 3 nights taxi tour covering the best of South India's hill stations - Mysore's royal heritage, Ooty's Nilgiri beauty, Coonoor's tea gardens, and Coorg's coffee plantations. Comfortable taxi service with all transfers. (Note: Accommodation not included - taxi service only)
               </p>
               <div className="flex flex-wrap gap-4 items-center mb-6">
                 <div className="bg-white text-green-700 px-6 py-3 rounded-lg">
@@ -82,7 +82,7 @@ export default function MysoreOotyCoorgPackagePage() {
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Mysore Ooty Coorg 4 Days 3 Nights - Complete Hill Station Experience</h2>
               <p className="text-lg text-gray-700 mb-8">
-                Discover the perfect blend of royal heritage and hill station beauty with our comprehensive 4 days 3 nights Mysore-Ooty-Coorg package. Begin with the grandeur of Mysore Palace and Brindavan Gardens, experience the cool climate of Ooty's botanical gardens and Doddabetta Peak, enjoy Coonoor's tea estates, and conclude with Coorg's aromatic coffee plantations and stunning waterfalls. This all-inclusive tour includes comfortable 3-star hotels, daily breakfast, and private AC vehicle throughout.
+                Discover the perfect blend of royal heritage and hill station beauty with our comprehensive 4 days 3 nights Mysore-Ooty-Coorg taxi package. Begin with the grandeur of Mysore Palace and Brindavan Gardens, experience the cool climate of Ooty's botanical gardens and Doddabetta Peak, enjoy Coonoor's tea estates, and conclude with Coorg's aromatic coffee plantations and stunning waterfalls. This taxi service includes private AC vehicle throughout. (Please note: Accommodation and meals must be arranged separately by you.)
               </p>
 
               {/* Highlights */}
@@ -167,8 +167,8 @@ export default function MysoreOotyCoorgPackagePage() {
                 <h4 className="text-xl font-bold text-gray-900 mb-3 mt-6">What Makes This Package Special?</h4>
                 <ul className="space-y-2 mb-6">
                   <li className="text-gray-700">✓ <strong>Comprehensive Coverage:</strong> Four amazing destinations in one package</li>
-                  <li className="text-gray-700">✓ <strong>Quality Accommodation:</strong> Comfortable 3-star hotels with modern amenities</li>
-                  <li className="text-gray-700">✓ <strong>Daily Breakfast:</strong> Start each day with a hearty meal at your hotel</li>
+                  <li className="text-gray-700">✓ <strong>Multi-Day Service:</strong> 3 nights of taxi availability for your journey</li>
+                  <li className="text-gray-700">✓ <strong>Driver Accommodation:</strong> All driver expenses covered by us</li>
                   <li className="text-gray-700">✓ <strong>Private Vehicle:</strong> Dedicated AC sedan/SUV for your group throughout</li>
                   <li className="text-gray-700">✓ <strong>Flexible Itinerary:</strong> Customize based on your preferences and interests</li>
                   <li className="text-gray-700">✓ <strong>Expert Planning:</strong> Optimized routes to maximize sightseeing time</li>
@@ -223,12 +223,12 @@ export default function MysoreOotyCoorgPackagePage() {
                       <dd className="font-semibold text-gray-900">4 Places</dd>
                     </div>
                     <div className="flex justify-between">
-                      <dt className="text-gray-600">Hotels:</dt>
-                      <dd className="font-semibold text-gray-900">3 Nights</dd>
+                      <dt className="text-gray-600">Service Duration:</dt>
+                      <dd className="font-semibold text-gray-900">3 Nights 4 Days</dd>
                     </div>
                     <div className="flex justify-between">
-                      <dt className="text-gray-600">Meals:</dt>
-                      <dd className="font-semibold text-gray-900">Breakfast</dd>
+                      <dt className="text-gray-600">Accommodation:</dt>
+                      <dd className="font-semibold text-gray-900">NOT Included</dd>
                     </div>
                   </dl>
                 </div>
