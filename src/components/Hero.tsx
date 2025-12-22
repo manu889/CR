@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className="relative bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 pt-24 pb-12 lg:py-20">
       <div className="container mx-auto px-4 max-w-7xl">
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 items-center">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 items-start">
           {/* Left Column - Content */}
           <div>
             {/* Badge */}
@@ -99,9 +99,9 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column - Booking Form */}
+          {/* Right Column - Compact Booking Form */}
           <div className="lg:sticky lg:top-24">
-            <BookingForm />
+            <BookingForm compact={true} />
           </div>
         </div>
       </div>

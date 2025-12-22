@@ -134,10 +134,10 @@ export default function Home() {
               WHY CHOOSE US
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-              Your Trusted Travel Partner in Mysore
+              Best Cab Service in Mysore - Your Trusted Travel Partner
             </h2>
             <p className="text-base text-gray-600 max-w-3xl mx-auto">
-              With <strong>15+ years of experience</strong>, we are committed to delivering safe and memorable rides. Whether it's daily commuting, weekend trips, or outstation travel, we're with you every mile of the journey.
+              With <strong>15+ years of experience</strong>, we are the <strong>leading taxi service in Mysore</strong> committed to delivering safe, comfortable rides. Whether it's <strong>cab booking for airport transfers</strong>, <strong>outstation trips to Ooty</strong>, <strong>Coorg taxi service</strong>, or <strong>local sightseeing in Mysore</strong>, we offer reliable cab rental services at competitive rates starting ₹11/km.
             </p>
           </div>
           
@@ -149,7 +149,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-1.5">Licensed & Insured</h3>
-              <p className="text-gray-600 text-sm">All our vehicles are fully licensed and insured for your safety and peace of mind</p>
+              <p className="text-gray-600 text-sm">All vehicles in our Mysore taxi fleet are fully licensed and insured for your safety - perfect for airport transfers, outstation trips, and local travel</p>
             </div>
             
             <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow">
@@ -159,7 +159,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-1.5">Experienced Drivers</h3>
-              <p className="text-gray-600 text-sm">Professional, courteous drivers with excellent knowledge of local and outstation routes</p>
+              <p className="text-gray-600 text-sm">Professional drivers with 10+ years experience in outstation cab services including Mysore to Ooty, Mysore to Coorg, Bangalore to Mysore routes, and local sightseeing</p>
             </div>
             
             <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow">
@@ -170,7 +170,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-1.5">Transparent Pricing</h3>
-              <p className="text-gray-600 text-sm">No hidden charges - what you see is what you pay. Clear, upfront pricing for all services</p>
+              <p className="text-gray-600 text-sm">No hidden charges for cab rental in Mysore. Starting at just ₹11/km, our cab booking service offers upfront pricing for all taxi services including tempo traveller rentals</p>
             </div>
           </div>
           
@@ -208,10 +208,10 @@ export default function Home() {
               OUR EXPERIENCE
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-              Explore Karnataka with Comfort
+              Explore Karnataka with Premium Taxi Service from Mysore
             </h2>
             <p className="text-base text-gray-600 max-w-2xl mx-auto">
-              From heritage sites to hill stations, we've made countless journeys memorable for our customers
+              Book cabs for Mysore to Ooty, Coorg, Wayanad, and Bangalore tours. Our outstation cab service covers all major tourist destinations in Karnataka with comfortable Innova, Etios, and Tempo Traveller options.
             </p>
           </div>
           
@@ -219,14 +219,14 @@ export default function Home() {
             <div className="relative h-48 md:h-56 rounded-xl overflow-hidden group">
               <img 
                 src="/Images/img (9).jpg" 
-                alt="Mysore Palace tour - Professional guided sightseeing with our comfortable taxi service"
+                alt="Mysore local taxi - One day tour packages with cab booking for Palace, Chamundi Hills, Zoo"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end p-4">
                 <div className="text-white">
-                  <p className="font-bold text-sm md:text-base">Mysore Tours</p>
-                  <p className="text-xs opacity-90">Heritage & Culture</p>
+                  <p className="font-bold text-sm md:text-base">Mysore Local Taxi</p>
+                  <p className="text-xs opacity-90">Sightseeing & One Day Tours</p>
                 </div>
               </div>
             </div>
@@ -234,14 +234,14 @@ export default function Home() {
             <div className="relative h-48 md:h-56 rounded-xl overflow-hidden group">
               <img 
                 src="/Images/img (11).jpg" 
-                alt="Ooty hill station cab service - Scenic drives with professional drivers from Mysore"
+                alt="Mysore to Ooty cab booking - Hill station taxi service with one way & round trip options"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end p-4">
                 <div className="text-white">
-                  <p className="font-bold text-sm md:text-base">Hill Stations</p>
-                  <p className="text-xs opacity-90">Ooty & Coonoor</p>
+                  <p className="font-bold text-sm md:text-base">Mysore to Ooty Cab</p>
+                  <p className="text-xs opacity-90">Hill Station Taxi Service</p>
                 </div>
               </div>
             </div>
@@ -249,14 +249,14 @@ export default function Home() {
             <div className="relative h-48 md:h-56 rounded-xl overflow-hidden group">
               <img 
                 src="/Images/img (13).jpg" 
-                alt="Coorg coffee plantation tours - Weekend packages with comfortable SUV cabs"
+                alt="Mysore to Coorg taxi - Weekend tour packages with Innova & SUV cab rental"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end p-4">
                 <div className="text-white">
-                  <p className="font-bold text-sm md:text-base">Coffee Land</p>
-                  <p className="text-xs opacity-90">Coorg & Chikmagalur</p>
+                  <p className="font-bold text-sm md:text-base">Mysore to Coorg Taxi</p>
+                  <p className="text-xs opacity-90">Weekend Tour Packages</p>
                 </div>
               </div>
             </div>
@@ -296,10 +296,10 @@ export default function Home() {
         <div className="container-custom relative z-10">
           <div className="text-center mb-8">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-              Our Customer Ratings
+              Rated #1 Taxi Service in Mysore
             </h2>
             <p className="text-base text-gray-600 max-w-2xl mx-auto">
-              Trusted by thousands of customers across Karnataka
+              10,000+ happy customers trust our cab booking service for outstation trips, airport transfers, and local sightseeing across Karnataka
             </p>
           </div>
           
