@@ -3,6 +3,7 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import StickyMobileCTA from '@/components/StickyMobileCTA'
+import ScrollToTop from '@/components/ScrollToTop'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://cabrentalmysore.in'),
@@ -87,10 +88,10 @@ export default function RootLayout({
               "email": "info@cabrentalmysore.com",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Nazarbad",
-                "addressLocality": "Mysore",
+                "streetAddress": "74, 6th Cross Rd, N R Mohalla, A J Block",
+                "addressLocality": "Gayathri Puram, Mysuru",
                 "addressRegion": "Karnataka",
-                "postalCode": "570001",
+                "postalCode": "570007",
                 "addressCountry": "IN"
               },
               "geo": {
@@ -236,6 +237,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <StickyMobileCTA />
+        <ScrollToTop />
       </body>
     </html>
   )

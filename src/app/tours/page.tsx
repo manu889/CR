@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { tourPackages, tourCategories } from '@/data/tours';
 import BookingForm from '@/components/BookingForm';
 import { BUSINESS_INFO } from '@/data/constants';
@@ -19,29 +20,45 @@ export const metadata: Metadata = {
 export default function ToursPage() {
   return (
     <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-amber-50 to-orange-50 py-16">
-        <div className="container-custom">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Mysore Tour Packages
-            </h1>
-            <p className="text-xl text-gray-600 mb-6">
-              Explore South India's most beautiful destinations with our carefully curated tour packages. From one-day trips to multi-day adventures, we've got you covered.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <a href={`tel:${BUSINESS_INFO.phone}`} className="btn-primary">
-                📞 Call to Book
-              </a>
-              <a 
-                href={`https://wa.me/${BUSINESS_INFO.whatsapp.replace(/\+/g, '')}?text=Hi, I'm interested in your tour packages`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary"
-              >
-                💬 WhatsApp Us
-              </a>
-            </div>
+      {/* Hero Section with Background Image */}
+      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/Images/img (1).jfif"
+            alt="Mysore Tour Packages"
+            fill
+            className="object-cover brightness-50"
+            priority
+          />
+        </div>
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 z-10" />
+
+        {/* Content */}
+        <div className="relative z-20 container-custom text-center text-white">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
+            Mysore Tour Packages
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto drop-shadow-md">
+            Discover the best of South India with our curated tour packages from Mysore
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a 
+              href={`tel:${BUSINESS_INFO.phone}`} 
+              className="px-8 py-3 bg-amber-600 hover:bg-amber-700 text-white rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              📞 Call to Book
+            </a>
+            <a 
+              href={`https://wa.me/${BUSINESS_INFO.whatsapp.replace(/[\s\+]/g, '')}?text=Hi, I'm interested in your tour packages`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-2 border-white rounded-lg font-semibold transition-all duration-300"
+            >
+              💬 WhatsApp Us
+            </a>
           </div>
         </div>
       </section>

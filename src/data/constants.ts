@@ -4,15 +4,15 @@ export const BUSINESS_INFO = {
   phone: '+91 96327 22100',
   whatsapp: '+91 96327 22100',
   email: 'info@cabrentalmysore.com',
-  address: 'Nazarbad, Mysore, Karnataka 570001, India',
+  address: '74, 6th Cross Rd, N R Mohalla, A J Block, Gayathri Puram, Mysuru, Karnataka 570007',
   addressDetails: {
-    street: 'Nazarbad',
-    city: 'Mysore',
+    street: '74, 6th Cross Rd, N R Mohalla, A J Block',
+    city: 'Gayathri Puram, Mysuru',
     state: 'Karnataka',
-    zipcode: '570001',
+    zipcode: '570007',
     country: 'India'
   },
-  googleMapsUrl: 'https://maps.google.com/?q=cab+rental+mysore',
+  googleMapsUrl: 'https://maps.google.com/?q=74+6th+Cross+Rd+NR+Mohalla+Mysuru+570007',
   googleRatings: {
     rating: 4.8,
     reviewCount: 150
