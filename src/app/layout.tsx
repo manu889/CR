@@ -136,6 +136,26 @@ export default function RootLayout({
                 {
                   "@type": "City",
                   "name": "Wayanad"
+                },
+                {
+                  "@type": "City",
+                  "name": "Chikmagalur"
+                },
+                {
+                  "@type": "City",
+                  "name": "Kabini"
+                },
+                {
+                  "@type": "City",
+                  "name": "Hassan"
+                },
+                {
+                  "@type": "City",
+                  "name": "Mangalore"
+                },
+                {
+                  "@type": "City",
+                  "name": "Tirupati"
                 }
               ],
               "hasOfferCatalog": {
@@ -147,7 +167,7 @@ export default function RootLayout({
                     "itemOffered": {
                       "@type": "Service",
                       "name": "Outstation Taxi Service",
-                      "description": "Long-distance cab service from Mysore to other cities"
+                      "description": "Long-distance cab service from Mysore to Ooty, Coorg, Wayanad, Bangalore, Chikmagalur, and Kabini at ₹11/km"
                     }
                   },
                   {
@@ -155,7 +175,7 @@ export default function RootLayout({
                     "itemOffered": {
                       "@type": "Service",
                       "name": "Airport Transfer Service",
-                      "description": "Reliable airport pickup and drop service"
+                      "description": "Bangalore airport pickup and drop from Mysore at ₹2,800 flat rate"
                     }
                   },
                   {
@@ -163,15 +183,31 @@ export default function RootLayout({
                     "itemOffered": {
                       "@type": "Service",
                       "name": "Local Sightseeing",
-                      "description": "Mysore city tour and local sightseeing packages"
+                      "description": "Mysore city one day tour covering all major attractions"
                     }
                   },
                   {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Tempo Traveller",
-                      "description": "Group travel solutions with tempo traveller"
+                      "name": "Tempo Traveller Rental",
+                      "description": "12 seater and 17 seater tempo traveller for group tours and family trips"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Corporate Transportation",
+                      "description": "Employee transport service and office commute solutions"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Tour Packages",
+                      "description": "Mysore to Ooty, Coorg, Wayanad one day trips and multi-day tour packages"
                     }
                   }
                 ]
