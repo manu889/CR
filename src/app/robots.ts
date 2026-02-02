@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/admin/'],
       },
     ],
-    sitemap: 'https://cabrentalmysore.in/sitemap.xml',
+    sitemap: 'https://www.cabrentalmysore.com/sitemap.xml',
   };
 }

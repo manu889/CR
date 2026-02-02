@@ -6,14 +6,14 @@ import StickyMobileCTA from '@/components/StickyMobileCTA'
 import ScrollToTop from '@/components/ScrollToTop'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://cabrentalmysore.in'),
+  metadataBase: new URL('https://www.cabrentalmysore.com'),
   title: {
     default: 'Mysore Cab Booking | #1 Taxi Service in Mysore ₹11/km | 24/7 Available',
     template: '%s | Cab Rental Mysore'
   },
   description: 'Book India\'s most trusted taxi service in Mysore. Outstation cabs, airport transfers, local tours from ₹11/km. 4.8★ rated with 10,000+ satisfied customers. GPS-enabled fleet, professional drivers. Instant booking: +91 96327 22100',
   keywords: 'taxi service mysore, cab booking mysore, mysore taxi, outstation cab mysore, airport taxi mysore, car rental mysore, mysore cab service, tempo traveller mysore, local taxi mysore, mysore to ooty cab, mysore to bangalore taxi',
-  authors: [{ name: 'Cab Rental Mysore', url: 'https://cabrentalmysore.in' }],
+  authors: [{ name: 'Cab Rental Mysore', url: 'https://www.cabrentalmysore.com' }],
   creator: 'Cab Rental Mysore',
   publisher: 'Cab Rental Mysore',
   formatDetection: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Mysore Cab Booking | #1 Taxi Service in Mysore',
     description: 'Book verified taxi service in Mysore for outstation trips, airport transfers, and local tours. 4.8★ rating, professional drivers, well-maintained vehicles.',
-    url: 'https://cabrentalmysore.in',
+    url: 'https://www.cabrentalmysore.com',
     siteName: 'Cab Rental Mysore',
     images: [
       {
@@ -72,18 +72,18 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.png" type="image/png" />
-        <link rel="canonical" href="https://cabrentalmysore.in" />
+        <link rel="canonical" href="https://www.cabrentalmysore.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "@id": "https://cabrentalmysore.in/#organization",
+              "@id": "https://www.cabrentalmysore.com/#organization",
               "name": "Cab Rental Mysore",
               "alternateName": "Mysore Cab Service",
               "description": "Premier taxi and cab rental service in Mysore offering outstation trips, airport transfers, local sightseeing, and tour packages with professional drivers and well-maintained vehicles.",
-              "url": "https://cabrentalmysore.in",
+              "url": "https://www.cabrentalmysore.com",
               "telephone": "+91-96327-22100",
               "email": "info@cabrentalmysore.com",
               "address": {
@@ -108,10 +108,10 @@ export default function RootLayout({
                 }
               ],
               "priceRange": "₹₹",
-              "image": "https://cabrentalmysore.in/og-image.jpg",
+              "image": "https://www.cabrentalmysore.com/og-image.jpg",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://cabrentalmysore.in/logo.png",
+                "url": "https://www.cabrentalmysore.com/logo.png",
                 "width": 250,
                 "height": 60
               },
@@ -235,16 +235,16 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "@id": "https://cabrentalmysore.in/#website",
-              "url": "https://cabrentalmysore.in",
+              "@id": "https://www.cabrentalmysore.com/#website",
+              "url": "https://www.cabrentalmysore.com",
               "name": "Cab Rental Mysore",
               "description": "Book taxi services in Mysore for outstation trips, airport transfers, and local tours",
               "publisher": {
-                "@id": "https://cabrentalmysore.in/#organization"
+                "@id": "https://www.cabrentalmysore.com/#organization"
               },
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://cabrentalmysore.in/search?q={search_term_string}",
+                "target": "https://www.cabrentalmysore.com/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             })
@@ -261,7 +261,7 @@ export default function RootLayout({
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://cabrentalmysore.in"
+                  "item": "https://www.cabrentalmysore.com"
                 }
               ]
             })

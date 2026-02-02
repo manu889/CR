@@ -97,10 +97,10 @@ export const metadata: Metadata = {
     title: 'Mysore Cab Booking | #1 Taxi Service in Mysore | ₹11/km',
     description: 'Book trusted taxi service in Mysore. Outstation trips, airport transfers, local tours. 4.8★ rating, 10,000+ happy customers. Professional drivers, GPS-enabled fleet. Call +91 96327 22100',
     type: 'website',
-    url: 'https://cabrentalmysore.in',
+    url: 'https://www.cabrentalmysore.com',
     images: [
       {
-        url: 'https://cabrentalmysore.in/og-image.jpg',
+        url: 'https://www.cabrentalmysore.com/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Cab Rental Mysore - Premium Taxi Services',
@@ -108,7 +108,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://cabrentalmysore.in',
+    canonical: 'https://www.cabrentalmysore.com',
   },
 };
 

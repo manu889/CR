@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Best Tour Packages from Mysore | One Day & Multi-Day Tours',
     description: 'Book the best tour packages from Mysore. One-day trips, weekend getaways, multi-day packages covering Ooty, Coorg, Wayanad, and more.',
-    url: 'https://cabrentalmysore.com/tours',
+    url: 'https://www.cabrentalmysore.com/tours',
     images: ['/og-tours.jpg']
   }
 };

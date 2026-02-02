@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: `${tour.title} - Book Now at ₹${tour.price.toLocaleString()}`,
       description: tour.description,
       type: 'website',
-      url: `https://cabrentalmysore.com/tours/${tour.slug}`,
+      url: `https://www.cabrentalmysore.com/tours/${tour.slug}`,
     },
   };
 }

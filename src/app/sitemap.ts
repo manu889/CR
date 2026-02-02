@@ -4,7 +4,7 @@ import { services } from '@/data/services';
 import { tourPackages } from '@/data/tours';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://cabrentalmysore.in';
+  const baseUrl = 'https://www.cabrentalmysore.com';
   
   // Static pages
   const staticPages = [

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Contact Us - Cab Rental Mysore',
     description: 'Get in touch with us for taxi bookings and inquiries. Available 24/7 to serve you.',
-    url: 'https://cabrentalmysore.in/contact',
+    url: 'https://www.cabrentalmysore.com/contact',
   },
 }
 
