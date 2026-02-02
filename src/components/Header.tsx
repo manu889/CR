@@ -60,8 +60,8 @@ export default function Header() {
             : (isScrolled ? 'shadow-md py-2' : 'backdrop-blur-sm py-4')
         }`}
       >
-      <nav className="container-custom">
-        <div className="flex items-center justify-between">
+      <nav className="container-custom overflow-visible">
+        <div className="flex items-center justify-between overflow-visible">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <img 
@@ -86,21 +86,22 @@ export default function Header() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </button>
-                    {/* Modern Mega Menu for Services and Tour Packages */}
+                    {/* Modern Professional Mega Menu */}
                     {(link.label === 'Services' || link.label === 'Tour Packages') ? (
-                      <div className="absolute top-full left-0 mt-3 w-[560px] opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible transition-all duration-300 ease-in-out" style={{ zIndex: 9999 }}>
-                        <div className="bg-white shadow-2xl rounded-2xl overflow-hidden border border-gray-200">
-                          <div className="px-5 py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white">
-                            <div className="flex items-center justify-between gap-6">
+                      <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-screen max-w-5xl -mx-8 opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible transition-all duration-300 ease-in-out" style={{ zIndex: 9999 }}>
+                        <div className="bg-white rounded-xl shadow-xl border border-gray-100 backdrop-blur-sm">
+                          {/* Header with clean design */}
+                          <div className="px-8 py-6 border-b border-gray-100">
+                            <div className="flex items-start justify-between">
                               <div>
-                                <h3 className="text-base font-bold leading-tight">{link.label}</h3>
-                                <p className="text-xs text-amber-50 mt-0.5">
+                                <h3 className="text-lg font-bold text-gray-900">{link.label}</h3>
+                                <p className="text-sm text-gray-600 mt-1">
                                   {megaMenuConfig[link.label as keyof typeof megaMenuConfig].subtitle}
                                 </p>
                               </div>
                               <Link
                                 href={link.href}
-                                className="shrink-0 inline-flex items-center gap-2 bg-white/15 hover:bg-white/20 border border-white/20 px-3 py-2 rounded-xl text-xs font-semibold transition-colors"
+                                className="inline-flex items-center gap-2 text-amber-600 hover:text-amber-700 font-semibold text-sm transition-colors"
                               >
                                 View all
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -110,6 +111,7 @@ export default function Header() {
                             </div>
                           </div>
 
+                          {/* Content Grid */}
                           {(() => {
                             const config = megaMenuConfig[link.label as keyof typeof megaMenuConfig];
                             const popularLabels = config.popular as readonly string[];
@@ -117,33 +119,39 @@ export default function Header() {
                             const others = link.dropdown.filter((i) => !popularLabels.includes(i.label));
 
                             return (
-                              <div className="grid grid-cols-5">
-                                <div className="col-span-2 bg-amber-50/70 border-r border-gray-200 p-4">
-                                  <p className="text-xs font-bold text-amber-800 mb-3">Popular</p>
-                                  <div className="space-y-1">
+                              <div className="grid grid-cols-3 gap-0">
+                                {/* Featured/Popular Section */}
+                                <div className="col-span-1 px-8 py-6 border-r border-gray-100">
+                                  <p className="text-xs font-bold uppercase tracking-wider text-amber-600 mb-4">Featured</p>
+                                  <div className="space-y-3">
                                     {popular.map((item) => (
                                       <Link
                                         key={item.href}
                                         href={item.href}
-                                        className="flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-semibold text-gray-800 hover:bg-white hover:shadow-sm transition-all"
+                                        className="group/item flex items-start gap-3 p-3 rounded-lg hover:bg-amber-50 transition-all"
                                       >
-                                        <span className="text-base" aria-hidden="true">{getMenuEmoji(item.label)}</span>
-                                        <span>{item.label}</span>
+                                        <div className="mt-1 text-xl group-hover/item:scale-110 transition-transform">{getMenuEmoji(item.label)}</div>
+                                        <div className="flex-1">
+                                          <div className="font-semibold text-gray-900 text-sm group-hover/item:text-amber-700">{item.label}</div>
+                                          <div className="text-xs text-gray-500 mt-0.5">Premium service</div>
+                                        </div>
                                       </Link>
                                     ))}
                                   </div>
                                 </div>
 
-                                <div className="col-span-3 p-4">
-                                  <p className="text-xs font-bold text-gray-800 mb-3">All {link.label}</p>
-                                  <div className="grid grid-cols-2 gap-2">
+                                {/* All Services Grid */}
+                                <div className="col-span-2 px-8 py-6">
+                                  <p className="text-xs font-bold uppercase tracking-wider text-gray-700 mb-4">All {link.label.toLowerCase()}</p>
+                                  <div className="grid grid-cols-3 gap-3">
                                     {others.map((item) => (
                                       <Link
                                         key={item.href}
                                         href={item.href}
-                                        className="rounded-xl px-3 py-2 text-sm text-gray-700 hover:bg-amber-50 hover:text-amber-700 transition-colors"
+                                        className="group/card p-3 rounded-lg border border-gray-200 hover:border-amber-200 hover:bg-amber-50/30 transition-all text-center"
                                       >
-                                        {item.label}
+                                        <div className="text-2xl mb-2 group-hover/card:scale-110 transition-transform">{getMenuEmoji(item.label)}</div>
+                                        <div className="text-sm font-medium text-gray-900 group-hover/card:text-amber-700">{item.label}</div>
                                       </Link>
                                     ))}
                                   </div>
