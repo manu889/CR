@@ -16,28 +16,30 @@ export default function Header() {
 
   const megaMenuConfig = {
     Services: {
-      subtitle: 'Outstation, airport, local sightseeing & more',
-      popular: ['Airport Transfers', 'Outstation Taxi', 'Local Sightseeing'],
+      coreServices: [
+        { label: 'Outstation Taxi', href: '/services/outstation-taxi', subtitle: 'Transparent outstation pricing' },
+        { label: 'Local Sightseeing', href: '/services/local-sightseeing', subtitle: 'Explore Mysore and surrounding cities' },
+        { label: 'Airport Transfer', href: '/services/airport-transfers', subtitle: 'On-time pickup to/from airports' },
+      ],
+      additionalOfferings: [
+        { label: 'Employee Transport', href: '/services/employee-transport', subtitle: 'Corporate transport solutions' },
+        { label: 'Tempo Traveller', href: '/services/tempo-traveller', subtitle: 'Group travel comfort' },
+        { label: 'Pilgrimage Tours', href: '/services/pilgrimage-tours', subtitle: 'Sacred journeys' },
+      ],
     },
     'Tour Packages': {
-      subtitle: 'One day trips, weekend getaways & pilgrimage tours',
-      popular: ['One Day Tours', 'Weekend Getaways', 'Pilgrimage Tours', 'Multi-Day Packages'],
+      coreServices: [
+        { label: 'Mysore One Day Tour', href: '/tours/mysore-one-day-tour', subtitle: 'Explore the cultural capital' },
+        { label: 'Bangalore-Mysore Tour', href: '/tours/bangalore-mysore-one-day', subtitle: 'Day trip from Bangalore' },
+        { label: 'Mysore-Coorg Tour', href: '/tours/mysore-coorg-one-day', subtitle: 'Hills and heritage combined' },
+      ],
+      additionalOfferings: [
+        { label: 'Weekend Packages', href: '/tours/chikmagalur-weekend-package', subtitle: '2-3 day getaways' },
+        { label: 'Wildlife Tours', href: '/tours/kabini-wildlife-package', subtitle: 'Nature and wildlife' },
+        { label: 'Pilgrimage Package', href: '/tours/tirupati-package-from-mysore', subtitle: 'Spiritual journeys' },
+      ],
     },
   } as const;
-
-  const getMenuEmoji = (label: string) => {
-    const l = label.toLowerCase();
-    if (l.includes('airport')) return '✈️';
-    if (l.includes('outstation')) return '🛣️';
-    if (l.includes('local')) return '🏙️';
-    if (l.includes('tempo')) return '🚐';
-    if (l.includes('employee')) return '🏢';
-    if (l.includes('pilgrimage')) return '🙏';
-    if (l.includes('weekend')) return '🌴';
-    if (l.includes('multi')) return '🏔️';
-    if (l.includes('one day')) return '🌅';
-    return '✨';
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,14 +56,14 @@ export default function Header() {
       
       {/* Main Header */}
       <header
-        className={`fixed ${headerPositionClass} left-0 right-0 z-50 transition-all duration-300 bg-[#ecaf53] ${
+        className={`fixed ${headerPositionClass} left-0 right-0 z-50 transition-all duration-300 bg-[#ecaf53] overflow-visible ${
           isHomePage 
             ? (isScrolled ? 'shadow-md py-2' : 'backdrop-blur-sm py-4')
             : (isScrolled ? 'shadow-md py-2' : 'backdrop-blur-sm py-4')
         }`}
       >
-      <nav className="container-custom overflow-visible">
-        <div className="flex items-center justify-between overflow-visible">
+      <nav className="container-custom overflow-visible relative z-50">
+        <div className="flex items-center justify-between overflow-visible relative">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <img 
@@ -76,7 +78,7 @@ export default function Header() {
             {NAV_LINKS.map((link) => (
               <div
                 key={link.href}
-                className="relative group/nav"
+                className="relative group/nav z-50"
               >
                 {link.dropdown ? (
                   <>
@@ -86,40 +88,18 @@ export default function Header() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </button>
-                    {/* Mega Menu - Clean Modern Design */}
-                    {(link.label === 'Services' || link.label === 'Tour Packages') ? (
-                      <div className="absolute top-full left-0 mt-3 w-[600px] opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible transition-all duration-200" style={{ zIndex: 9999 }}>
-                        <div className="bg-white rounded-lg shadow-lg border border-gray-200">
-                          {/* Simple Grid Layout */}
-                          <div className="p-6">
-                            <div className="grid grid-cols-2 gap-x-8 gap-y-3">
-                              {link.dropdown.map((item) => (
-                                <Link
-                                  key={item.href}
-                                  href={item.href}
-                                  className="flex items-center gap-3 px-4 py-3 rounded-md hover:bg-gray-50 transition-colors group"
-                                >
-                                  <span className="text-xl">{getMenuEmoji(item.label)}</span>
-                                  <span className="text-sm font-medium text-gray-700 group-hover:text-amber-600">{item.label}</span>
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    ) : (
-                      <div className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg py-2 min-w-[220px] opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible transition-all duration-300 ease-in-out z-50">
-                        {link.dropdown.map((item) => (
-                          <Link
-                            key={item.href}
-                            href={item.href}
-                            className="block px-4 py-2 text-gray-700 hover:bg-amber-50 hover:text-amber-600 transition-colors"
-                          >
-                            {item.label}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
+                    {/* Simple Dropdown */}
+                    <div className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg py-2 min-w-[220px] opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible transition-all duration-300 ease-in-out z-50">
+                      {link.dropdown.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className="block px-4 py-2 text-gray-700 hover:bg-amber-50 hover:text-amber-600 transition-colors"
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
                   </>
                 ) : (
                   <Link
