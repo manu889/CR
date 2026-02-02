@@ -10,10 +10,10 @@ export default function PopularRoutes() {
             POPULAR ROUTES
           </span>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-            Frequently Traveled Routes
+            High-Demand Outstation Cab Routes from Mysore
           </h2>
           <p className="text-base text-gray-600 max-w-2xl mx-auto">
-            Explore our most traveled destinations from Mysore
+            Book reliable cab rentals from Mysore to Ooty, Coorg, Bangalore Airport, Tirupati, Kabini, and other top destinations with our trusted taxi service.
           </p>
         </div>
 

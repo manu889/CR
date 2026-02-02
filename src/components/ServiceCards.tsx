@@ -10,10 +10,10 @@ export default function ServiceCards() {
             OUR SERVICES
           </span>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-            Tailored Taxi Services
+            Tailored Taxi & Cab Rental Services in Mysore
           </h2>
           <p className="text-base text-gray-600 max-w-2xl mx-auto">
-            Comprehensive taxi solutions for all your travel needs in and around Mysore
+            Comprehensive taxi solutions for airport taxi Mysore, outstation cab rentals to Ooty, Coorg, Wayanad, and reliable local sightseeing trips in Mysore.
           </p>
         </div>
 

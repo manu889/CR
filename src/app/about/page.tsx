@@ -63,7 +63,7 @@ export default function AboutPage() {
                   Our commitment to quality taxi services in Mysore has made us the preferred choice for travelers seeking comfortable, safe, and affordable transportation across South India.
                 </p>
                 <p className="text-base text-gray-600 mb-8 leading-relaxed">
-                  From a small taxi operation to now managing over 100 vehicles with 50+ professional drivers, we continue to set benchmarks in cab rental services and travel excellence in Mysore.
+                  From a small taxi operation to a trusted travel brand, we continue to set benchmarks in cab rental services and travel excellence in Mysore with safety-first operations, reliable support, and clean AC rides.
                 </p>
                 <Link 
                   href="/book" 
@@ -85,12 +85,12 @@ export default function AboutPage() {
                   <div className="text-gray-700 font-medium">Happy Travel Customers</div>
                 </div>
                 <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-2xl text-center border-2 border-amber-100 shadow-sm hover:shadow-lg transition-shadow">
-                  <div className="text-5xl font-bold text-amber-600 mb-2">50+</div>
-                  <div className="text-gray-700 font-medium">Expert Taxi Drivers</div>
+                  <div className="text-5xl font-bold text-amber-600 mb-2">24/7</div>
+                  <div className="text-gray-700 font-medium">Customer Support</div>
                 </div>
                 <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-2xl text-center border-2 border-amber-100 shadow-sm hover:shadow-lg transition-shadow">
-                  <div className="text-5xl font-bold text-orange-600 mb-2">100+</div>
-                  <div className="text-gray-700 font-medium">Vehicles Fleet</div>
+                  <div className="text-5xl font-bold text-orange-600 mb-2">4.8★</div>
+                  <div className="text-gray-700 font-medium">Google Rating</div>
                 </div>
               </div>
             </div>

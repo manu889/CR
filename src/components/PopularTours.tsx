@@ -26,10 +26,10 @@ export default function PopularTours() {
             TOUR PACKAGES
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Popular Tour Packages
+            Popular Tour Packages with Cab Rental from Mysore
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Explore top destinations with our curated tour packages. One-day trips to multi-day adventures.
+            Explore Mysore one-day taxi trips, pilgrimage tours, and multi-day adventures with dedicated cab rental services for Ooty, Coorg, Kabini, and Tirupati.
           </p>
         </div>
 

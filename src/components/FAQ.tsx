@@ -75,10 +75,10 @@ export default function FAQ() {
             FAQs
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Frequently Asked Questions
+            Frequently Asked Questions About Taxi Services in Mysore
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Got questions? We've got answers!
+            Need clarity on cab rental Mysore, airport taxi packages, or outstation cab bookings? Here are the answers.
           </p>
         </div>
 

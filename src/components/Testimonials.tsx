@@ -42,10 +42,10 @@ export default function Testimonials() {
             TESTIMONIALS
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            What Our Customers Say
+            Why Travelers Trust Our Taxi Service in Mysore
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Real experiences from thousands of satisfied travelers who chose Cab Rental Mysore for their journeys.
+            Real experiences from satisfied travelers who relied on Cab Rental Mysore's airport taxi, outstation cab service, and trusted travel agency support.
           </p>
         </div>
 
@@ -133,21 +133,26 @@ export default function Testimonials() {
 
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-12 border-t border-gray-200">
-          <div className="text-center">
-            <p className="text-4xl font-bold text-amber-600 mb-2">10,000+</p>
-            <p className="text-gray-600">Happy Customers</p>
+          <div className="bg-white rounded-xl p-5 text-center shadow-md">
+            <div className="text-3xl font-bold text-amber-600 mb-1.5">10,000+</div>
+            <div className="text-xs text-gray-600">Happy Customers</div>
           </div>
-          <div className="text-center">
-            <p className="text-4xl font-bold text-amber-600 mb-2">15+</p>
-            <p className="text-gray-600">Years Experience</p>
+
+          <div className="bg-white rounded-xl p-5 text-center shadow-md">
+            <div className="text-3xl font-bold text-blue-600 mb-1.5">15+</div>
+            <div className="text-xs text-gray-600 font-medium mb-1">Years Experience</div>
           </div>
-          <div className="text-center">
-            <p className="text-4xl font-bold text-amber-600 mb-2">100+</p>
-            <p className="text-gray-600">Vehicles</p>
+
+          <div className="bg-white rounded-xl p-5 text-center shadow-md">
+            <div className="text-3xl font-bold text-green-600 mb-1.5">5,000+</div>
+            <div className="text-xs text-gray-600 font-medium mb-1">Airport Transfers</div>
+            <div className="text-[10px] text-gray-500">Trusted by pilots & travelers</div>
           </div>
-          <div className="text-center">
-            <p className="text-4xl font-bold text-amber-600 mb-2">4.9/5</p>
-            <p className="text-gray-600">Average Rating</p>
+
+          <div className="bg-white rounded-xl p-5 text-center shadow-md">
+            <div className="text-3xl font-bold text-purple-600 mb-1.5">4.9/5</div>
+            <div className="text-xs text-gray-600 font-medium mb-1">Average Rating</div>
+            <div className="text-[10px] text-gray-500">Based on recent reviews</div>
           </div>
         </div>
       </div>

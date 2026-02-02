@@ -97,7 +97,21 @@ export default function Footer() {
       <div className="border-t border-gray-700">
         <div className="container-custom py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-300">
-            <p className="text-gray-400 text-sm">&copy; {new Date().getFullYear()} Cab Rental Mysore. All rights reserved.</p>
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+              <p className="text-gray-400 text-sm">&copy; {new Date().getFullYear()} Cab Rental Mysore. All rights reserved.</p>
+              <span className="hidden sm:inline text-gray-600">|</span>
+              <p className="text-gray-500 text-xs">
+                Powered by{' '}
+                <a 
+                  href="https://hffglobal.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-amber-400 hover:text-amber-300 font-semibold transition-colors"
+                >
+                  HFF Global
+                </a>
+              </p>
+            </div>
             <div className="flex gap-6">
               <Link href="/privacy" className="text-gray-300 hover:text-amber-400 transition-colors text-sm">Privacy Policy</Link>
               <Link href="/terms" className="text-gray-300 hover:text-amber-400 transition-colors text-sm">Terms & Conditions</Link>

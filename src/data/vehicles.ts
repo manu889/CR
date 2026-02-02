@@ -18,7 +18,7 @@ export const vehicles: VehicleData[] = [
     image: '/Images/Vehicles/Dzire.png',
     features: ['AC', 'Music System', 'Comfortable Seats', 'Ample Boot Space'],
     idealFor: 'Couples, Small families, Airport transfers',
-    pricePerKm: '₹11 - ₹13'
+    pricePerKm: '₹12'
   },
   {
     id: '2',
@@ -28,7 +28,7 @@ export const vehicles: VehicleData[] = [
     image: '/Images/Vehicles/Etios.png',
     features: ['AC', 'Spacious Interior', 'Fuel Efficient', 'Smooth Ride'],
     idealFor: 'Outstation trips, Business travel',
-    pricePerKm: '₹11 - ₹13'
+    pricePerKm: '₹12'
   },
   {
     id: '3',
@@ -38,7 +38,7 @@ export const vehicles: VehicleData[] = [
     image: '/Images/Vehicles/Innova.png',
     features: ['AC', 'Spacious', '7-Seater', 'Large Boot', 'Captain Seats'],
     idealFor: 'Family trips, Group travel, Outstation tours',
-    pricePerKm: '₹14 - ₹16'
+    pricePerKm: '₹15'
   },
   {
     id: '4',
@@ -48,7 +48,7 @@ export const vehicles: VehicleData[] = [
     image: '/Images/Vehicles/Ertiga.png',
     features: ['AC', '7-Seater', 'Comfortable', 'Good Mileage'],
     idealFor: 'Family outings, Weekend trips',
-    pricePerKm: '₹13 - ₹15'
+    pricePerKm: '₹14'
   },
   {
     id: '5',
@@ -58,7 +58,7 @@ export const vehicles: VehicleData[] = [
     image: '/Images/Vehicles/Crysta.webp',
     features: ['Premium AC', 'Luxury Seats', 'Advanced Safety', 'Premium Audio'],
     idealFor: 'Corporate travel, VIP guests, Luxury tours',
-    pricePerKm: '₹16 - ₹18'
+    pricePerKm: '₹17'
   },
   {
     id: '6',
@@ -68,7 +68,7 @@ export const vehicles: VehicleData[] = [
     image: '/Images/Vehicles/Tempo-Traveller.png',
     features: ['AC', 'Push-back Seats', 'Music System', 'Large Luggage Space'],
     idealFor: 'Group tours, Pilgrimages, Corporate outings',
-    pricePerKm: '₹18 - ₹20'
+    pricePerKm: '₹19'
   },
   {
     id: '7',
@@ -78,6 +78,6 @@ export const vehicles: VehicleData[] = [
     image: '/Images/Vehicles/Tempo-Traveller.png',
     features: ['AC', 'Comfortable Seating', 'Entertainment System', 'Spacious'],
     idealFor: 'Large groups, Family functions, College trips',
-    pricePerKm: '₹20 - ₹22'
+    pricePerKm: '₹21'
   }
 ];

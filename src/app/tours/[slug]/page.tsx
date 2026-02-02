@@ -72,6 +72,11 @@ export default async function TourDetailPage({ params }: { params: Promise<{ slu
     },
   };
 
+  const whatsappNumber = BUSINESS_INFO.whatsapp.replace(/\D/g, '');
+  const website = BUSINESS_INFO.website?.replace(/\/$/, '') ?? 'https://www.cabrentalmysore.com';
+  const tourUrl = `${website}/tours/${tour.slug}`;
+  const whatsappText = `Hi, I'm interested in ${tour.title}. Please share the best price and itinerary. ${tourUrl}`;
+
   return (
     <>
       <script
@@ -117,7 +122,7 @@ export default async function TourDetailPage({ params }: { params: Promise<{ slu
                   Book This Tour
                 </a>
                 <a 
-                  href={`https://wa.me/${BUSINESS_INFO.whatsapp.replace(/\+/g, '')}?text=Hi, I'm interested in ${tour.title}`}
+                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors"

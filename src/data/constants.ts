@@ -39,8 +39,8 @@ export const BUSINESS_INFO = {
 
   features: [
     '15+ Years of Service',
-    '50+ Professional Drivers',
-    '100+ Well-Maintained Vehicles',
+    'Background-verified drivers',
+    'Clean, AC vehicles',
     '24/7 Customer Support',
     '10,000+ Happy Customers',
     'GPS-Enabled Fleet'
@@ -48,7 +48,14 @@ export const BUSINESS_INFO = {
 };
 
 export const NAV_LINKS = [
-  { label: 'Home', href: '/' },
+  { 
+    label: 'Home', 
+    href: '/'
+  },
+  { 
+    label: 'About', 
+    href: '/about'
+  },
   { 
     label: 'Services', 
     href: '/services',
@@ -73,12 +80,11 @@ export const NAV_LINKS = [
     ]
   },
   { 
-    label: 'Vehicles', 
+    label: 'Vehicles / Fleet', 
     href: '/vehicles'
   },
   { 
-    label: 'About', 
-    href: '/about'
-  },
-  { label: 'Contact', href: '/contact' }
+    label: 'Contact Us', 
+    href: '/contact'
+  }
 ];

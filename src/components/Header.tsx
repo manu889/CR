@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { BUSINESS_INFO, NAV_LINKS } from '@/data/constants';
+import TopBar from './TopBar';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -11,6 +12,32 @@ export default function Header() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const pathname = usePathname();
   const isHomePage = pathname === '/';
+  const headerPositionClass = isScrolled ? 'top-0' : 'top-7';
+
+  const megaMenuConfig = {
+    Services: {
+      subtitle: 'Outstation, airport, local sightseeing & more',
+      popular: ['Airport Transfers', 'Outstation Taxi', 'Local Sightseeing'],
+    },
+    'Tour Packages': {
+      subtitle: 'One day trips, weekend getaways & pilgrimage tours',
+      popular: ['One Day Tours', 'Weekend Getaways', 'Pilgrimage Tours', 'Multi-Day Packages'],
+    },
+  } as const;
+
+  const getMenuEmoji = (label: string) => {
+    const l = label.toLowerCase();
+    if (l.includes('airport')) return '✈️';
+    if (l.includes('outstation')) return '🛣️';
+    if (l.includes('local')) return '🏙️';
+    if (l.includes('tempo')) return '🚐';
+    if (l.includes('employee')) return '🏢';
+    if (l.includes('pilgrimage')) return '🙏';
+    if (l.includes('weekend')) return '🌴';
+    if (l.includes('multi')) return '🏔️';
+    if (l.includes('one day')) return '🌅';
+    return '✨';
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,26 +48,27 @@ export default function Header() {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isHomePage 
-          ? (isScrolled ? 'bg-white shadow-md py-2' : 'bg-white/95 backdrop-blur-sm py-4 border-b border-gray-100')
-          : (isScrolled ? 'bg-white shadow-md py-2' : 'bg-white/95 backdrop-blur-sm py-4 border-b border-gray-100')
-      }`}
-    >
+    <>
+      {/* Top Bar */}
+      <TopBar />
+      
+      {/* Main Header */}
+      <header
+        className={`fixed ${headerPositionClass} left-0 right-0 z-50 transition-all duration-300 bg-[#ecaf53] ${
+          isHomePage 
+            ? (isScrolled ? 'shadow-md py-2' : 'backdrop-blur-sm py-4')
+            : (isScrolled ? 'shadow-md py-2' : 'backdrop-blur-sm py-4')
+        }`}
+      >
       <nav className="container-custom">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="bg-amber-600 text-white group-hover:bg-amber-700 rounded-lg p-2 transition-colors">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            </div>
-            <div>
-              <div className="font-bold text-base sm:text-lg text-gray-900">Cab Rental Mysore</div>
-              <div className="text-xs hidden sm:block text-gray-600">Taxi,Cabs, Services</div>
-            </div>
+          <Link href="/" className="flex items-center group">
+            <img 
+              src="/Logo.avif" 
+              alt="Cab Rental Mysore Logo"
+              className="h-12 w-auto group-hover:opacity-80 transition-opacity"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -58,17 +86,86 @@ export default function Header() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </button>
-                    <div className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg py-2 min-w-[220px] opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible transition-all duration-300 ease-in-out z-50">
-                      {link.dropdown.map((item) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          className="block px-4 py-2 text-gray-700 hover:bg-amber-50 hover:text-amber-600 transition-colors"
-                        >
-                          {item.label}
-                        </Link>
-                      ))}
-                    </div>
+                    {/* Modern Mega Menu for Services and Tour Packages */}
+                    {(link.label === 'Services' || link.label === 'Tour Packages') ? (
+                      <div className="absolute top-full left-0 mt-3 w-[560px] opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible transition-all duration-300 ease-in-out" style={{ zIndex: 9999 }}>
+                        <div className="bg-white shadow-2xl rounded-2xl overflow-hidden border border-gray-200">
+                          <div className="px-5 py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white">
+                            <div className="flex items-center justify-between gap-6">
+                              <div>
+                                <h3 className="text-base font-bold leading-tight">{link.label}</h3>
+                                <p className="text-xs text-amber-50 mt-0.5">
+                                  {megaMenuConfig[link.label as keyof typeof megaMenuConfig].subtitle}
+                                </p>
+                              </div>
+                              <Link
+                                href={link.href}
+                                className="shrink-0 inline-flex items-center gap-2 bg-white/15 hover:bg-white/20 border border-white/20 px-3 py-2 rounded-xl text-xs font-semibold transition-colors"
+                              >
+                                View all
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                              </Link>
+                            </div>
+                          </div>
+
+                          {(() => {
+                            const config = megaMenuConfig[link.label as keyof typeof megaMenuConfig];
+                            const popularLabels = config.popular as readonly string[];
+                            const popular = link.dropdown.filter((i) => popularLabels.includes(i.label));
+                            const others = link.dropdown.filter((i) => !popularLabels.includes(i.label));
+
+                            return (
+                              <div className="grid grid-cols-5">
+                                <div className="col-span-2 bg-amber-50/70 border-r border-gray-200 p-4">
+                                  <p className="text-xs font-bold text-amber-800 mb-3">Popular</p>
+                                  <div className="space-y-1">
+                                    {popular.map((item) => (
+                                      <Link
+                                        key={item.href}
+                                        href={item.href}
+                                        className="flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-semibold text-gray-800 hover:bg-white hover:shadow-sm transition-all"
+                                      >
+                                        <span className="text-base" aria-hidden="true">{getMenuEmoji(item.label)}</span>
+                                        <span>{item.label}</span>
+                                      </Link>
+                                    ))}
+                                  </div>
+                                </div>
+
+                                <div className="col-span-3 p-4">
+                                  <p className="text-xs font-bold text-gray-800 mb-3">All {link.label}</p>
+                                  <div className="grid grid-cols-2 gap-2">
+                                    {others.map((item) => (
+                                      <Link
+                                        key={item.href}
+                                        href={item.href}
+                                        className="rounded-xl px-3 py-2 text-sm text-gray-700 hover:bg-amber-50 hover:text-amber-700 transition-colors"
+                                      >
+                                        {item.label}
+                                      </Link>
+                                    ))}
+                                  </div>
+                                </div>
+                              </div>
+                            );
+                          })()}
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg py-2 min-w-[220px] opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible transition-all duration-300 ease-in-out z-50">
+                        {link.dropdown.map((item) => (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            className="block px-4 py-2 text-gray-700 hover:bg-amber-50 hover:text-amber-600 transition-colors"
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
                   </>
                 ) : (
                   <Link
@@ -105,7 +202,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="xl:hidden p-2 text-gray-700 hover:text-amber-600"
+            className="lg:hidden p-2 text-gray-700 hover:text-amber-600"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
@@ -134,7 +231,7 @@ export default function Header() {
                       >
                         {link.label}
                         <svg
-                          className={`w-4 h-4 inline ml-1 transition-transform ${
+                          className={`w-4 h-4 ml-auto transition-transform ${
                             openDropdown === link.label ? 'rotate-180' : ''
                           }`}
                           fill="none"
@@ -150,9 +247,10 @@ export default function Header() {
                             <Link
                               key={item.href}
                               href={item.href}
-                              className="px-4 py-2 text-gray-600 hover:bg-amber-50 hover:text-amber-600 rounded-lg"
+                              className="px-4 py-2 text-gray-600 hover:bg-amber-50 hover:text-amber-600 rounded-lg flex items-center gap-2"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
+                              <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
                               {item.label}
                             </Link>
                           ))}
@@ -182,5 +280,6 @@ export default function Header() {
         )}
       </nav>
     </header>
+    </>
   );
 }

@@ -116,7 +116,8 @@ export default function Home() {
   return (
     <>
       <Hero />
-      
+      {/* Fleet / Vehicles Section moved just below Hero */}
+      <VehicleCards />
       {/* Services Section */}
       <ServiceCards />
       
@@ -134,10 +135,10 @@ export default function Home() {
               WHY CHOOSE US
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-              Best Cab Service in Mysore - Your Trusted Travel Partner
+              Best Cab & Taxi Service in Mysore - Your Trusted Travel Partner
             </h2>
             <p className="text-base text-gray-600 max-w-3xl mx-auto">
-              With <strong>15+ years of experience</strong>, we are the <strong>leading taxi service in Mysore</strong> committed to delivering safe, comfortable rides. Whether it's <strong>cab booking for airport transfers</strong>, <strong>outstation trips to Ooty</strong>, <strong>Coorg taxi service</strong>, or <strong>local sightseeing in Mysore</strong>, we offer reliable cab rental services at competitive rates starting ₹11/km.
+              With <strong>15+ years of experience</strong>, we are the <strong>leading taxi service in Mysore</strong> and trusted <strong>travel agency in Mysore</strong> delivering safe, comfortable rides. Whether it's <strong>airport taxi Mysore</strong>, <strong>outstation cab service to Ooty, Coorg, Bangalore Airport, Wayanad</strong>, or <strong>local sightseeing in Mysore</strong>, we offer reliable <strong>cab rental Mysore</strong> services at competitive rates starting ₹11/km.
             </p>
           </div>
           
@@ -149,7 +150,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-1.5">Licensed & Insured</h3>
-              <p className="text-gray-600 text-sm">All vehicles in our <strong>Mysore taxi fleet</strong> are fully licensed and insured - perfect for <strong>airport transfers</strong>, <strong>outstation cab service</strong>, and <strong>local sightseeing</strong></p>
+              <p className="text-gray-600 text-sm">All vehicles in our <strong>Mysore taxi fleet</strong> are fully licensed, insured, and ready for <strong>airport taxi Mysore</strong>, trustworthy <strong>outstation cab service</strong>, <strong>cab rental Mysore</strong>, and premium local sightseeing.</p>
             </div>
             
             <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow">
@@ -159,7 +160,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-1.5">Experienced Drivers</h3>
-              <p className="text-gray-600 text-sm">Professional drivers with 10+ years experience in <strong>outstation cab services</strong> including <strong>Mysore to Ooty</strong>, <strong>Mysore to Coorg</strong>, <strong>Bangalore to Mysore</strong>, and <strong>local sightseeing tours</strong></p>
+              <p className="text-gray-600 text-sm">Professional drivers with extensive experience in <strong>outstation cab services</strong> such as <strong>Mysore to Ooty</strong>, <strong>Mysore to Coorg</strong>, <strong>Mysore to Tirupati</strong>, <strong>Bangalore Airport transfers</strong>, and curated <strong>travels in Mysore</strong>.</p>
             </div>
             
             <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow">
@@ -170,20 +171,15 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-1.5">Transparent Pricing</h3>
-              <p className="text-gray-600 text-sm">No hidden charges for <strong>cab rental in Mysore</strong>. Starting at just ₹11/km, our <strong>cab booking service</strong> offers upfront pricing for all <strong>taxi services</strong> including <strong>tempo traveller rentals</strong></p>
+              <p className="text-gray-600 text-sm">No hidden charges for <strong>cab rental in Mysore</strong>. Starting at just ₹11/km, our <strong>cab booking service</strong> offers upfront pricing for <strong>outstation cab service</strong>, <strong>airport taxi Mysore</strong>, and <strong>tempo traveller rentals</strong> for pilgrim and corporate tours.</p>
             </div>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-5 text-center">
+          <div className="grid md:grid-cols-2 gap-5 text-center">
             <div className="bg-white rounded-xl p-4 shadow-md">
               <div className="text-3xl mb-1.5">🏆</div>
               <div className="text-2xl font-bold text-amber-600 mb-0.5">15+</div>
               <div className="text-gray-600 font-medium text-sm">Years in Service</div>
-            </div>
-            <div className="bg-white rounded-xl p-4 shadow-md">
-              <div className="text-3xl mb-1.5">👥</div>
-              <div className="text-2xl font-bold text-amber-600 mb-0.5">50+</div>
-              <div className="text-gray-600 font-medium text-sm">Professional Drivers</div>
             </div>
             <div className="bg-white rounded-xl p-4 shadow-md">
               <div className="text-3xl mb-1.5">😊</div>
@@ -193,9 +189,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
-      {/* Vehicles */}
-      <VehicleCards />
       
       {/* Popular Routes */}
       <PopularRoutes />
@@ -208,10 +201,10 @@ export default function Home() {
               OUR EXPERIENCE
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-              Premium Taxi Service in Mysore - Explore Karnataka
+              Premium Taxi & Outstation Cab Service in Mysore for Karnataka Explorations
             </h2>
             <p className="text-base text-gray-600 max-w-2xl mx-auto">
-              <strong>Book cabs for Mysore to Ooty</strong>, <strong>Coorg</strong>, <strong>Wayanad</strong>, and <strong>Bangalore tours</strong>. Our <strong>outstation cab service</strong> covers all major destinations with comfortable <strong>Innova</strong>, <strong>Etios</strong>, and <strong>Tempo Traveller</strong> options.
+              <strong>Book cab rentals for Mysore to Ooty</strong>, <strong>Coorg</strong>, <strong>Wayanad</strong>, <strong>Bangalore Airport & Bangalore tours</strong>, <strong>Tirupati</strong>, and <strong>Kabini</strong>. Our <strong>outstation cab service</strong> and <strong>airport taxi Mysore</strong> cover all major destinations with comfortable <strong>Innova</strong>, <strong>Etios</strong>, and <strong>Tempo Traveller</strong> options.
             </p>
           </div>
           
@@ -299,7 +292,7 @@ export default function Home() {
               Rated #1 Taxi Service in Mysore
             </h2>
             <p className="text-base text-gray-600 max-w-2xl mx-auto">
-              10,000+ happy customers trust our <strong>cab booking service</strong> for <strong>outstation trips</strong>, <strong>airport transfers</strong>, and <strong>local sightseeing</strong> across Karnataka
+              10,000+ happy customers trust our <strong>cab rental Mysore</strong> and <strong>taxi service in Mysore</strong> for <strong>outstation trips</strong>, <strong>airport taxi Mysore</strong>, and <strong>local sightseeing</strong> across Karnataka.
             </p>
           </div>
           
@@ -354,21 +347,21 @@ export default function Home() {
               Book Best Taxi Service in Mysore <br /> Today
             </h2>
             <p className="text-md md:text-xl font-semibold mb-3 text-white">
-              Reliable Cab Rental for Outstation, Local & Airport Transfers
+              Reliable Cab Rental & Airport Taxi Service for Outstation, Local & Corporate Travels
             </p>
             <p className="text-base md:text-lg mb-8 text-white/95">
               Professional drivers • Clean AC vehicles • Transparent pricing • 24/7 availability<br />
-              Serving Mysore to Ooty, Coorg, Bangalore, Wayanad & all major destinations
+              Serving Mysore to Ooty, Coorg, Bangalore Airport, Wayanad, Tirupati, Kabini & all major destinations with trusted cab rentals from our travel agency in Mysore
             </p>
             
             {/* Keyword Badges */}
             <div className="flex flex-wrap justify-center gap-2 mb-6">
-              <span className="bg-white/20 text-white px-2.5 py-1 rounded-full text-xs font-medium">Mysore Taxi</span>
-              <span className="bg-white/20 text-white px-2.5 py-1 rounded-full text-xs font-medium">Cab Booking Mysore</span>
-              <span className="bg-white/20 text-white px-2.5 py-1 rounded-full text-xs font-medium">Outstation Cabs</span>
-              <span className="bg-white/20 text-white px-2.5 py-1 rounded-full text-xs font-medium">Airport Taxi</span>
-              <span className="bg-white/20 text-white px-2.5 py-1 rounded-full text-xs font-medium">Tempo Traveller</span>
-              <span className="bg-white/20 text-white px-2.5 py-1 rounded-full text-xs font-medium">Tour Packages</span>
+              <span className="bg-white/20 text-white px-2.5 py-1 rounded-full text-xs font-medium">Cab Rental Mysore</span>
+              <span className="bg-white/20 text-white px-2.5 py-1 rounded-full text-xs font-medium">Mysore to Ooty Cab</span>
+              <span className="bg-white/20 text-white px-2.5 py-1 rounded-full text-xs font-medium">Airport Taxi Mysore</span>
+              <span className="bg-white/20 text-white px-2.5 py-1 rounded-full text-xs font-medium">Outstation Cab Service</span>
+              <span className="bg-white/20 text-white px-2.5 py-1 rounded-full text-xs font-medium">Travel Agency Mysore</span>
+              <span className="bg-white/20 text-white px-2.5 py-1 rounded-full text-xs font-medium">Tempo Traveller Rental</span>
             </div>
             
             {/* CTA Buttons */}
@@ -398,7 +391,7 @@ export default function Home() {
             
             {/* Why Choose Section */}
             <div className="text-center">
-              <h3 className="text-lg font-bold mb-4">Why Choose Cab Rental Mysore?</h3>
+              <h3 className="text-lg font-bold mb-4">Why Choose Cab Rental Mysore's Taxi Service?</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 <div>
                   <div className="text-2xl font-bold">15+</div>
