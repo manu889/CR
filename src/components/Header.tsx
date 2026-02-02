@@ -60,8 +60,8 @@ export default function Header() {
             : (isScrolled ? 'shadow-md py-2' : 'backdrop-blur-sm py-4')
         }`}
       >
-      <nav className="container-custom">
-        <div className="flex items-center justify-between">
+      <nav className="container-custom overflow-visible">
+        <div className="flex items-center justify-between overflow-visible">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <img 
@@ -88,7 +88,7 @@ export default function Header() {
                     </button>
                     {/* Modern Mega Menu for Services and Tour Packages */}
                     {(link.label === 'Services' || link.label === 'Tour Packages') ? (
-                      <div className="absolute top-full left-0 mt-3 w-[560px] opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible transition-all duration-300 ease-in-out" style={{ zIndex: 9999 }}>
+                      <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 w-screen max-w-4xl -mx-8 opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible transition-all duration-300 ease-in-out" style={{ zIndex: 9999 }}>
                         <div className="bg-white shadow-2xl rounded-2xl overflow-hidden border border-gray-200">
                           <div className="px-5 py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white">
                             <div className="flex items-center justify-between gap-6">
@@ -117,31 +117,31 @@ export default function Header() {
                             const others = link.dropdown.filter((i) => !popularLabels.includes(i.label));
 
                             return (
-                              <div className="grid grid-cols-5">
-                                <div className="col-span-2 bg-amber-50/70 border-r border-gray-200 p-4">
-                                  <p className="text-xs font-bold text-amber-800 mb-3">Popular</p>
-                                  <div className="space-y-1">
+                              <div className="grid grid-cols-2 gap-0">
+                                <div className="bg-amber-50/70 border-r border-gray-200 p-6">
+                                  <p className="text-xs font-bold text-amber-800 mb-4">Popular Services</p>
+                                  <div className="space-y-2">
                                     {popular.map((item) => (
                                       <Link
                                         key={item.href}
                                         href={item.href}
-                                        className="flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-semibold text-gray-800 hover:bg-white hover:shadow-sm transition-all"
+                                        className="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-semibold text-gray-800 hover:bg-white hover:shadow-sm transition-all"
                                       >
-                                        <span className="text-base" aria-hidden="true">{getMenuEmoji(item.label)}</span>
-                                        <span>{item.label}</span>
+                                        <span className="text-lg" aria-hidden="true">{getMenuEmoji(item.label)}</span>
+                                        <span className="flex-1">{item.label}</span>
                                       </Link>
                                     ))}
                                   </div>
                                 </div>
 
-                                <div className="col-span-3 p-4">
-                                  <p className="text-xs font-bold text-gray-800 mb-3">All {link.label}</p>
+                                <div className="p-6">
+                                  <p className="text-xs font-bold text-gray-800 mb-4">All {link.label}</p>
                                   <div className="grid grid-cols-2 gap-2">
                                     {others.map((item) => (
                                       <Link
                                         key={item.href}
                                         href={item.href}
-                                        className="rounded-xl px-3 py-2 text-sm text-gray-700 hover:bg-amber-50 hover:text-amber-700 transition-colors"
+                                        className="rounded-lg px-3 py-2.5 text-sm text-gray-700 hover:bg-amber-50 hover:text-amber-700 transition-colors"
                                       >
                                         {item.label}
                                       </Link>
